@@ -1,9 +1,24 @@
 import 'dart:html';
 import 'dart:math' as math;
-void main (){
-  querySelector('#sample_text_id')
-    .. text="1+2+бнбн+100="
-    .. onClick.listen(Add);
+InputElement toDoInput;
+UListElement toDoList;
+ButtonElement deleteAll;
+
+
+void main () {
+
+
+  querySelector('#add_number')
+    ..text = "Add All"
+    ..onClick.listen(Addmunbers);
+
+  deleteAll = querySelector('#delete-all');
+  deleteAll.onClick.listen((e) => toDoList.children.clear());
+
+
+  toDoList = querySelector('#to-do-list');
+  toDoInput.onChange.listen(Addmunbers);
+
 }
 //void reverseText(MouseEvent event){
 // var stuMap = {
@@ -18,16 +33,25 @@ void main (){
 
 
 //}
-void Add(MouseEvent event) {
-  var text= querySelector('#sample_studentid_id').text;
-  int x,y;
-  x=1;
+void Addmunbers(Event e)  {
+  var x,y,z;
+  x= int.parse(querySelector("id_number_input_1").value);
+  y= int.parse(querySelector("id_number_input").value);
+  z=x+y;
+  var newToDo = new LIElement();
+  newToDo.text = z.toString();
+  newToDo.onClick.listen((e) => newToDo.remove());
+  toDoList.children.add(newToDo);
 
-  for (var i = 2; i < 101; i++) {
-    x=x+i;
-  }
 
-  querySelector('#sample_studentid_id').text= x.toString();
+
+ // x=1;
+
+  //for (var i = 2; i < 101; i++) {
+   // x=x+i;
+ // }
+
+  //querySelector('#sample_studentid_id').text= x.toString();
 
 }
 
