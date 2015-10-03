@@ -3,21 +3,21 @@ import 'dart:math' as math;
 void main() {
   querySelector('#sample_text_id')
     ..text = 'Click me!'
-    ..onClick.listen((MouseEvent e)=>randomStudentID("you!",e));
+    ..onClick.listen(add1to100);
 }
 
-void reverseText(MouseEvent event) {
-  var text = querySelector('#sample_text_id').text;
-  var buffer = new StringBuffer();
-  for (int i = text.length - 1; i >= 0; i--) {
-    buffer.write(text[i]);
+void add1to100(MouseEvent event) {
+  int sum=0;
+  for (int i = 1; i <=100; i++) {
+    sum+=i;
   }
-  querySelector('#sample_text_id').text = buffer.toString();
+  String s="1 add to 100 is:"+sum.toString();
+  querySelector('#sample_studentid_id').text = s;
 }
 void randomStudentID(String showStr,MouseEvent even){
   var students={
-    0:10001,
-    1:10002,
+    0:100001,
+    1:100002,
     2:100003,
     3:100004,
     4:100005,
