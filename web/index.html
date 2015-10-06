@@ -5,16 +5,23 @@
     <meta charset="utf-8">
     <title>Myconference</title>
     <link rel="stylesheet" href="index.css">
+    <script type="application/dart" src="index.dart"></script>
+    <script src="packages/browser/dart.js"></script>
   </head>
   <body>
     <h1>Myconference</h1>
-
     <p>Hello world from Dart!</p>
+
     <div id="sample_container_id">
-      <p id="sample_text_id">Click me!</p>
-      <p id="sample_studentid_id"></p>
+      <p style="margin-left: 350px;margin-top:80px">First Number:
+        <input type="text" name="first" id="first" style="height: 25px;width: 200px;"><br></p>
+      <p style="margin-left: 320px;margin-top:30px">Second Nmuber:
+        <input type="text" name="second" id="second" style="height: 25px;width: 200px;" ><br></p>
+      <input type="button" name="first" id="getadd" style="height: 25px;width: 80px;margin-left: 435px;margin-top:20px" value="+"><br>
+      <p style="margin-left: 390px;margin-top:20px">Result:
+        <input type="text" name="last" id="last" style="height: 25px;width: 200px;"></p>
+      <p style="color: coral;font-size: 25pt;
+         margin-left: 350px;margin-top:30px" id="sample_text_id" name="sample_text_id">Click here know 1+2+3...+100 ?</p>
     </div>
-    <script type="application/dart" src="index.dart"></script>
-    <script src="packages/browser/dart.js"></script>
   </body>
 </html>
