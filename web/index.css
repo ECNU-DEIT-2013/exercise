@@ -11,7 +11,7 @@ h1, p {
   color: #333;
 }
 
-#sample_container_id {
+#sample_container_id1 {
   width: 100%;
   height: 400px;
   position: relative;
@@ -19,15 +19,8 @@ h1, p {
   background-color: #fff;
 }
 
-#sample_text_id {
-  font-size: 24pt;
-  text-align: center;
-  margin-top: 140px;
-  -webkit-user-select: none;
-  user-select: none;
-}
-#sample_studentid_id {
-  font-size: 24pt;
+#sample_text_id1{
+  font-size: 40pt;
   text-align: center;
   margin-top: 140px;
   -webkit-user-select: none;
