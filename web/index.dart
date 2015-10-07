@@ -6,12 +6,13 @@ void main() {
 }
 
 void add(MouseEvent event){
-
-  int z=0;
-  for(int i=1;i<=100;i++)
-  {z +=i;
-  }
+  int x =int.parse(document.getElementById("x").value);
+  int y =int.parse(document.getElementById("y").value);
+  var z =x+y;
   querySelector('#z').value=z.toString();
 }
+
+
+
 
 
