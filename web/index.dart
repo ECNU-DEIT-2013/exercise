@@ -1,6 +1,5 @@
 import 'dart:html';
 import 'dart:math' as math;
-import 'utility/people.dart';
 void main() {
   querySelector('#sample_text_id')
     ..text = 'Click me!'
@@ -26,9 +25,6 @@ void randomStudentID(String showStr,MouseEvent even){
     5:100005
   };
   var random = new math.Random();
-  var ple= new people();
-ple..lastName='aa'
-  ..firstName='bb';
   var getYou=students[random.nextInt(6)];
-  querySelector('#sample_studentid_id').text = ple.lastName;
+  querySelector('#sample_studentid_id').text = getYou.toString()+showStr;
 }
