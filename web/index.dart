@@ -1,29 +1,24 @@
 import 'dart:html';
 import 'dart:math' as math;
 void main() {
-  querySelector('#sample_text_id')
-    ..text = 'Click me!'
-    ..onClick.listen(add1to100);
+  querySelector('#botton1_id').onClick.listen((MouseEvent e)=>add1to100(int.parse(document.getElementById("text1").value),int.parse(document.getElementById("text2").value),e));
+  querySelector('#sample_text_id').text = 'Click me!';
+  querySelector('#botton2_id')
+  ..onClick.listen(addToDoItem);
 }
 
-void add1to100(MouseEvent event) {
+void add1to100(int origin1,int origin2,MouseEvent e) {
   int sum=0;
-  for (int i = 1; i <=100; i++) {
+  for (int i = origin1; i <=origin2; i++) {
     sum+=i;
-  }
-  String s="1 add to 100 is:"+sum.toString();
+}
+  String s=origin1.toString()+" add to "+origin2.toString()+" is "+sum.toString();
   querySelector('#sample_studentid_id').text = s;
 }
-void randomStudentID(String showStr,MouseEvent even){
-  var students={
-    0:100001,
-    1:100002,
-    2:100003,
-    3:100004,
-    4:100005,
-    5:100005
-  };
-  var random = new math.Random();
-  var getYou=students[random.nextInt(6)];
-  querySelector('#sample_studentid_id').text = getYou.toString()+showStr;
+void addToDoItem(Event e)
+{
+  UListElement toDoList=querySelector('#toDoList');
+  var newToDo=new TextInputElement();
+  newToDo.value="12334";
+  toDoList.children.add(newToDo);
 }
