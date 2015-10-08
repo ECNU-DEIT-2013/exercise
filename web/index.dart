@@ -2,8 +2,8 @@ import 'dart:html';
 import 'dart:math' as math;
 void main() {
   querySelector('#sample_text_id')
-    ..text = 'Click me!'
-    ..onClick.listen((MouseEvent e)=>randomStudentID("you!",e));
+    ..text = '1到100相加总和'
+    ..onClick.listen(add);
 }
 
 void reverseText(MouseEvent event) {
@@ -26,4 +26,12 @@ void randomStudentID(String showStr,MouseEvent even){
   var random = new math.Random();
   var getYou=students[random.nextInt(6)];
   querySelector('#sample_studentid_id').text = getYou.toString()+showStr;
+}
+
+void add(MouseEvent event) {
+  var sum = 0;
+  for (var i = 0;i <= 100;i++) {
+    sum = sum + i;
+  }
+  querySelector('#sample_text_id').text = sum.toString();
 }
