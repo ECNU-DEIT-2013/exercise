@@ -2,9 +2,8 @@ import 'dart:html';
 import 'dart:math' as math;
 import 'utility/people.dart';
 void main() {
-  querySelector('#sample_text_id')
-    ..text = 'Click me!'
-    ..onClick.listen((MouseEvent e)=>randomStudentID("you!",e));
+  querySelector('#text1').value=1.toString();
+  querySelector('#button').onClick.listen((MouseEvent e)=>add(int.parse(document.getElementById("text2").value),e));
 }
 
 void reverseText(MouseEvent event) {
@@ -30,4 +29,11 @@ ple..lastName='aa'
   ..firstName='bb';
   var getYou=students[random.nextInt(6)];
   querySelector('#sample_studentid_id').text = ple.lastName;
+}
+void add(int n2,MouseEvent e){
+  int s=0;
+  for(int i = 1; i <= n2; i++){
+    s=s+i;
+  }
+  querySelector('#text3').value=s.toString();
 }
