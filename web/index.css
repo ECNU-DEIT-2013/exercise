@@ -10,8 +10,25 @@ body {
 h1, p {
   color: #333;
 }
-
+#button_for_add{
+  margin-left:49.3% ;
+  font-size: 20px;
+}
+#input1{
+  width:30px;
+  margin-left: 47%;
+}
+#input2{
+  width:30px;
+}
 #sample_container_id {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+#sample_container_id2 {
   width: 100%;
   height: 400px;
   position: relative;
@@ -26,10 +43,33 @@ h1, p {
   -webkit-user-select: none;
   user-select: none;
 }
-#sample_studentid_id {
+
+#sample_text_id2 {
+  font-size: 24pt;
+  text-align: center;
+  margin-top: 100px;
+  -webkit-user-select: none;
+  user-select: none;
+}
+#text_for_add{
+  text-align: center;
+}
+#sample_student_id{text-align: center;}
+
+#container_addTo100{
+  width: 100%;
+  height: 400px;
+  position: relative;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+#text_id3{
   font-size: 24pt;
   text-align: center;
   margin-top: 140px;
   -webkit-user-select: none;
   user-select: none;
+}
+#text_for_addTo100{
+  text-align: center;
 }
