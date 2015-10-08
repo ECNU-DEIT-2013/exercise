@@ -6,8 +6,8 @@ void main() {
     ..onClick.listen(Add);
 }
 
-void Add(MouseEvent event){
-  var i=0;
+ Add(MouseEvent event){
+  var i;
   var s=0;
   for(i=1;i<=100;i++)
   {s=s+i;}
