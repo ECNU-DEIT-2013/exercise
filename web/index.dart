@@ -15,7 +15,6 @@ void reverseText(MouseEvent event) {
   }
   querySelector('#sample_text_id').text = buffer.toString();
 }
-void test(){}
 void randomStudentID(String showStr,MouseEvent even){
   var students={
     0:10001,
