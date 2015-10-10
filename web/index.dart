@@ -1,11 +1,18 @@
 import 'dart:html';
 import 'dart:math' as math;
+InputElement toDoButton;
+UListElement toDoList;
 void main() {
-  querySelector('#sample_text_id')
-    ..text = 'add 1 to 100:'
-    ..onClick.listen(add);
 
+  toDoButton = querySelector('#to-do-button');
+  toDoList = querySelector('#to-do-list');
+  toDoButton.onClick.listen(addToDoItem);
 
+}
+void addToDoItem(Event e) {
+  var newToDo = new TextInputElement();
+  newToDo.text = '';
+  toDoList.children.add(newToDo);
 }
 
 void reverseText(MouseEvent event) {
@@ -31,9 +38,11 @@ void plus1(MouseEvent event) {
   querySelector('#sample_studentid_id').text =stuID.toString();
 }
 void add(MouseEvent event){
-  int number=0;
-  for(int i=1; i<=100;i++)
-  { number=number + i;}
-  querySelector('#sample_text_id').text = number.toString();
+  var number=0;
+  for (int i = toDoList.text.length - 1; i >= 0; i--){
+    toDoList.text=toDoList.toString();
+     number=number+toDoList.text[i];
+   }
+    querySelector('#sample_text_id').text = number.toString();
 
 }
