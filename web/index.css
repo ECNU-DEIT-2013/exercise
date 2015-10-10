@@ -5,6 +5,8 @@ body {
   font-weight: normal;
   line-height: 1.2em;
   margin: 15px;
+  background-color: WhiteSmoke;
+  color: black;
 }
 
 h1, p {
@@ -25,13 +27,17 @@ h1, p {
   margin-top: 140px;
   -webkit-user-select: none;
   user-select: none;
-  background-color: #00B5AB;
 }
 
 #button_add_id {
     font-size:20pt;
     width:100px;
     color:#41C1BC;
+}
+#delete-all {
+  font-size:20pt;
+  width:150px;
+  color:#41C1BC;
 }
 
 #number_a{
@@ -40,7 +46,30 @@ h1, p {
 #number_b{
   font-size: 15pt;
 }
-#sample_text_id2 {
-  font-size:30pt;
-  text-align: center;
+
+#to-do-input {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  padding: 5px 0px 5px 5px;
+  width: 100%;
+  border: 1px solid Silver;
+  background-color: White;
+}
+
+#to-do-list {
+  padding:0px;
+  margin:0px;
+  width:100px;
+  list-style-position:inside;
+}
+
+#to-do-list li:hover {
+  width:150px;
+  font-size:20px;
+  padding:10px 0px 10px 10px;
+  border-bottom: 3px solid Silver;
+  background-color:#cccccc;
+  color:red;
+  cursor:pointer;
 }
