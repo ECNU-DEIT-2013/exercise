@@ -1,29 +1,36 @@
 import 'dart:html';
-import 'dart:math' as math;
-void main() {
-  querySelector('#sample_text_id')
-    ..text = 'Click me!'
-    ..onClick.listen((MouseEvent e)=>randomStudentID("you!",e));
+DivElement toDoDiv;
+InputElement toDoInput1;
+InputElement toDoInput2;
+ButtonElement toDoAdd;
+ButtonElement toDoDelete;
+void main()
+{
+  toDoDiv=querySelector('#add');
+  toDoInput1=querySelector('#num1');
+  toDoInput2=querySelector('#num2');
+  toDoAdd=querySelector('#btn1');
+  toDoDelete=querySelector('#btn2');
+  toDoAdd.onClick.listen(addItem);
+  toDoDelete.onClick.listen((e)=>toDoDiv.children.clear());
+  toDoDelete.onClick.listen(numReset);
 }
 
-void reverseText(MouseEvent event) {
-  var text = querySelector('#sample_text_id').text;
-  var buffer = new StringBuffer();
-  for (int i = text.length - 1; i >= 0; i--) {
-    buffer.write(text[i]);
-  }
-  querySelector('#sample_text_id').text = buffer.toString();
+
+void addItem(Event e)
+{
+  var newToDo=new InputElement();
+  var result;
+  result=int.parse(querySelector('#num1').value)+int.parse(querySelector('#num2').value);
+  newToDo.value=result.toString();
+  newToDo.onClick.listen((e)=>newToDo.remove());
+
+  toDoDiv.children.add(newToDo);
 }
-void randomStudentID(String showStr,MouseEvent even){
-  var students={
-    0:10001,
-    1:10002,
-    2:100003,
-    3:100004,
-    4:100005,
-    5:100005
-  };
-  var random = new math.Random();
-  var getYou=students[random.nextInt(6)];
-  querySelector('#sample_studentid_id').text = getYou.toString()+showStr;
+
+
+void numReset(MouseEvent event) {
+  toDoInput1.value = '';
+  toDoInput2.value = '';
 }
+

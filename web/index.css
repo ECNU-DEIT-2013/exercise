@@ -7,29 +7,70 @@ body {
   margin: 15px;
 }
 
-h1, p {
-  color: #333;
-}
-
 #sample_container_id {
   width: 100%;
   height: 400px;
   position: relative;
   border: 1px solid #ccc;
   background-color: #fff;
+
 }
 
-#sample_text_id {
-  font-size: 24pt;
-  text-align: center;
-  margin-top: 140px;
-  -webkit-user-select: none;
-  user-select: none;
+#text{
+  font-size:30px;
+  font-weight:bold;
+
 }
-#sample_studentid_id {
-  font-size: 24pt;
-  text-align: center;
-  margin-top: 140px;
-  -webkit-user-select: none;
-  user-select: none;
+
+#num1{
+  width:100px;
+  height:30px;
+  font-size:24px;
+  text-align:center;
+  float:left;
+
 }
+#num2{
+  width:100px;
+  height:30px;
+  font-size:24px;
+  text-align:center;
+  float:left;
+
+}
+#txt1{
+  font-size:24px;
+  float:left;
+  margin:10px;
+}
+#txt2{
+  font-size:24px;
+  float:left;
+  margin:10px;
+}
+ul{
+  float:left;
+  margin:0 0 0 -20px;
+}
+
+#add input{
+  width:100px;
+  height:30px;
+  font-size:24px;
+  text-align:center;
+  float:left;
+
+}
+#btn1{
+  font-size:20px;
+  margin:0 10px 0 100px;
+
+}
+#btn2 {
+  font-size: 20px;
+}
+
+#add{
+  float:left;
+}
+
