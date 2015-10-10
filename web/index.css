@@ -16,7 +16,6 @@ h1, p {
     height: 400px;
     position: relative;
     border: 1px solid #ccc;
-    background-color: #F8F8F8;
     text-align: center;
 }
 
@@ -26,7 +25,7 @@ h1, p {
     margin-top: 140px;
     -webkit-user-select: none;
     user-select: none;
-    margin-left: 180px;
+    margin-left: 500px;
     margin-right: 150px;
     width:160px;
 }
@@ -79,14 +78,70 @@ h1, p {
     position: relative;
     width: 30px;
 }
-#sample_picture_id{
-    margin-top: 40px;
-    text-align: center;
-    position: relative;
-    width: 350px;
-    margin-left: 0px;
-}
 #sample_containleft_id{
     text-align: left;
     margin-left: 50px;
+}
+#sample_todoinput_id{
+    font-size: 15pt;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width:150px;
+}
+#sample_todoinput1_id{
+    font-size: 15pt;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width:150px;
+}
+#sample_todoinput2_id{
+    font-size: 15pt;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width:150px;
+}
+#sample_todotext_id{
+    font-size: 15pt;
+    text-align: center;
+    margin-top: 150px;
+    margin-left: 180px;
+    margin-right: 150px;
+    width:160px;
+}
+#sample_todolist_id{
+    font-size: 15pt;
+    text-align: center;
+    margin-top:50px;
+    margin-left: 500px;
+    margin-right: 10px;
+    width:150px;
+}
+#sample_button_id{
+    font-size: 15pt;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width:150px;
+}
+#sample_qingkong_id{
+    font-size: 15pt;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width:150px;
+}
+#sample_explain_id{
+    font-size: 18pt;
+    text-align: center;
+    margin-top: 100px;
+    margin-left: 10px;
+    margin-right: 10px;
 }

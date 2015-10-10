@@ -1,13 +1,19 @@
 import 'dart:html';
 import 'dart:math' as math;
+InputElement toDoInput;
+UListElement toDoList;
+ButtonElement DeleteAll;
+ButtonElement QingKong;
 void main(){
-  var c;
-  int s=0;
-  querySelector('#sample_text_id')
-    ..text="Add number"
-    ..onClick.listen((MouseEvent e)=>randomSelectStu(c,e));
-  querySelector('#sample_text1_id')
-    ..onClick.listen((MouseEvent e)=>AddNumber(s,e));
+  toDoInput=querySelector('#sample_todoinput_id');
+  toDoList=querySelector('#sample_todolist_id');
+  DeleteAll=querySelector('#sample_button_id');
+  DeleteAll.onClick.listen((e) {
+    toDoList.children.clear();
+  });
+  QingKong=querySelector('#sample_qingkong_id');
+  QingKong.onClick.listen(Qingkong);
+  toDoInput.onChange.listen(AddInput);
 }
 void randomSelectStu(String c, MouseEvent event){
   var A,B;
@@ -24,3 +30,21 @@ void AddNumber(int s, MouseEvent event){
     s=s+i;
   document.getElementById("sample_add_id").value=s.toString();
 }
+void AddInput(Event e){
+  var newToDo=new InputElement();
+  var A,B,a,b,c;
+  A=document.getElementById('sample_todoinput1_id').value;
+  B=toDoInput.value;
+  a=int.parse(A);
+  b=int.parse(B);
+  c=a+b;
+  newToDo.value=c.toString();
+  newToDo.onClick.listen((e)=>newToDo.remove());
+  toDoList.children.add(newToDo);
+}
+void Qingkong(Event e){
+  toDoInput.value='';
+  querySelector('#sample_todoinput1_id').value='';
+}
+
+

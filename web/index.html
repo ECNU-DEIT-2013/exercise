@@ -10,18 +10,28 @@
 <h1>Myconference</h1>
 <p>Hello world from Dart!</p>
 <div id="sample_container_id">
-  <div id="sample_containleft_id">
-    <input type="button" id="sample_text_id" value="AddNumber" onClick="javascript:{this.disabled=true;document.add.submit();}" onfocus="'this.value='" onblur="this.value='加法得数'">
-    <input type="button" id="sample_text1_id" value="For i=1 to 100" onClick="javascript:{this.disabled=true;document.add.submit();}" onfocus="'this.value='" onblur="this.value='得数'">
-    <div id="sample_student_id">
-      <input  id="sample_studentone_id" value="数字1">
-      <input type="text" id="sample_symbol_id" value="+">
-      <input type="text" id="sample_studenttwo_id" value="数字2">
-      <input type="text" id="sample_symbolx_id" value="=">
-      <input type="text" id="sample_studentid_id" value="得数">
-      <input type="text" id="sample_add_id" value="得数">
-    </div>
+    <p id="sample_explain_id">点击“清空”按钮，清空数字；点击“删除”按钮，删除得数</p>
+  <div>
+      <input id="sample_todoinput1_id"
+             type="text"
+             placeholder="数字1">
+      <input id="sample_todoinput2_id"
+             type="text"
+             placeholder="+">
+    <input id="sample_todoinput_id"
+            type="text"
+            placeholder="数字2">
+      <input id="sample_qingkong_id"
+             type="button"
+             value="清空">
+      <input id="sample_button_id"
+             type="button"
+            value="删除">
   </div>
+ <div>
+     <ul id="sample_todolist_id" >
+     </ul>
+ </div>
 </div>
 <script type="application/dart" src="index.dart"></script>
 <script src="packages/browser/dart.js"></script>
