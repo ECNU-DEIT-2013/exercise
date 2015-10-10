@@ -47,3 +47,14 @@ h1, p {
   -webkit-user-select: none;
   user-select: none;
 }
+#to-do-list {
+  padding:0px;
+  margin:0px;
+  list-style-position:inside;
+}
+
+#to-do-list li {
+  padding:5px 0px 5px 5px;
+  border-bottom: 1px dotted Silver;
+}
+
