@@ -1,39 +1,25 @@
 import 'dart:html';
-import 'dart:math' as math;
-import 'utility/people.dart';
+InputElement t1,t2,t3;
+UListElement ul1;
 void main() {
-  querySelector('#text1').value=1.toString();
-  querySelector('#button').onClick.listen((MouseEvent e)=>add(int.parse(document.getElementById("text2").value),e));
+  querySelector('#text1').value = 1.toString();
+  querySelector('#button').onClick.listen((MouseEvent e) => addddd(int.parse(document.getElementById("text1").value),int.parse(document.getElementById("text2").value), e));
+  t1 = querySelector('#text1');
+  t2=querySelector('#text2');
+  t3=querySelector('#text3');
+  ul1=querySelector('#ula');
+  querySelector('#button2').onClick.listen(addToDoItem);
 }
-
-void reverseText(MouseEvent event) {
-  var text = querySelector('#sample_text_id').text;
-  var buffer = new StringBuffer();
-  for (int i = text.length - 1; i >= 0; i--) {
-    buffer.write(text[i]);
-  }
-  querySelector('#sample_text_id').text = buffer.toString();
-}
-void randomStudentID(String showStr,MouseEvent even){
-  var students={
-    0:10001,
-    1:10002,
-    2:100003,
-    3:100004,
-    4:100005,
-    5:100005
-  };
-  var random = new math.Random();
-  var ple= new people();
-ple..lastName='aa'
-  ..firstName='bb';
-  var getYou=students[random.nextInt(6)];
-  querySelector('#sample_studentid_id').text = ple.lastName;
-}
-void add(int n2,MouseEvent e){
+void addddd(int n1,n2,MouseEvent e){
   int s=0;
-  for(int i = 1; i <= n2; i++){
+  for(int i = n1; i <= n2; i++){
     s=s+i;
   }
   querySelector('#text3').value=s.toString();
+}
+void addToDoItem(MouseEvent e) {
+  var newToDo = new LIElement();
+  newToDo.text =querySelector('#text3').value;
+  t1.value = '';t2.value='';t3.value='';
+  ul1.children.add(newToDo);
 }

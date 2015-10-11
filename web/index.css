@@ -1,35 +1,45 @@
 body {
-  background-color: #F8F8F8;
+  font-family: 'Open Sans', sans-serif;
+  background-color: WhiteSmoke;
+  margin: 15px;
+  color: black;
+}
+#jiafa{
+  color:#000000;
+  text-align: center;
+  font-size: 36px;
+  font-weight: normal;
+  padding: 5px 0px 5px 5px;
+  width: 100%;
+  border: 1px solid Silver;
+
+  color:#000000;
+}
+#jisuanquyu {
+  font-size: 24px;
+  text-align: center;
+  tab-index:center;
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   font-weight: normal;
-  line-height: 1.2em;
-  margin: 15px;
-}
-
-h1, p {
-  color: #333;
-}
-
-#sample_container_id {
+  padding: 80px 5px 80px 5px;
   width: 100%;
-  height: 400px;
-  position: relative;
-  border: 1px solid #ccc;
-  background-color: #fff;
+  border: 2px solid Silver;
+  background-color: #00B5AB;
 }
 
-#sample_text_id {
-  font-size: 24pt;
+#xianshijieguo {
+  padding:0px;
+  margin:0px;
+  list-style-position:inside;
+  fout-color:blue;
   text-align: center;
-  margin-top: 140px;
-  -webkit-user-select: none;
-  user-select: none;
 }
-#sample_studentid_id {
-  font-size: 24pt;
-  text-align: center;
-  margin-top: 140px;
-  -webkit-user-select: none;
-  user-select: none;
+
+#to-do-list li {
+  padding:5px 0px 5px 5px;
+  border-bottom: 1px dotted Silver;
+}
+#ula{
+  fout-color:blue;
 }
