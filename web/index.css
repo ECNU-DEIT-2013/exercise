@@ -7,31 +7,77 @@ body {
   margin: 15px;
 }
 
-h1, p {
-  color: #333;
+#add{
+  margin-top: 50px;
+  margin-left: 50px;
+  width: 50px;
+  height: 20px;
+}
+#delete{
+  margin-top: 50px;
+  margin-left: 50px;
+  width: 50px;
+  height: 20px;
 }
 
-#sample_container_id {
-  width: 100%;
-  height: 400px;
-  position: relative;
-  border: 1px solid #ccc;
-  background-color: #fff;
+#delete1{
+  margin-top: 50px;
+  margin-left: 50px;
+  width: 50px;
+  height: 20px;
 }
 
-#sample_text_id {
-  font-size: 24pt;
-  text-align: center;
-  margin-top: 140px;
-  -webkit-user-select: none;
-  user-select: none;
+#input1{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  padding: 5px 0px 5px 5px;
+  width: 25%;
+  border: 1px solid Silver;
+  background-color: White;
+  margin-top:20px ;
+  margin-left:20px;
 }
 
-#sample_sums_id {
-  width: 100%;
-  height: 500px;
-  font-size: 24pt;
-  text-align: center;
-  border: 1px solid #ccc;
-  background-color: #fff;
+#input2{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  padding: 5px 0px 5px 5px;
+  width: 25%;
+  border: 1px solid Silver;
+  background-color: White;
+  margin-top:20px ;
+}
+
+#to-do-list {
+  padding:0px;
+  margin-top:50px;
+  margin-left:50px;
+  list-style-position:inside;
+}
+
+#sum{
+  margin-top:50px;
+  margin-left:50px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.2em;
+  border-color: black;
+  border-bottom-width: thin;
+}
+
+#input{
+  margin-top: 50px;
+  margin-left: 50px;
+  width: 50px;
+  height: 20px;
+}
+
+#sum1{
+  margin-top: 50px;
+  margin-left: 50px;
+  width: 50px;
+  height: 20px;
 }

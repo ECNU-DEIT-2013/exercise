@@ -1,44 +1,58 @@
 import 'dart:html';
 import 'dart:math' as math;
+
+InputElement toDoInput;
+UListElement toDoList1,toDoList2;
+ButtonElement button1,button2,button3,button4,button5;
+
 void main() {
-  querySelector('#sample_text_id')
-    ..text = '1 added to 100 equals'
-    ..onClick.listen(adds);
+  toDoList1 = querySelector('#to-do-list');
+  toDoList2 = querySelector("#to-do-list1");
+  button1 = querySelector('#add');
+  button2=querySelector('#delete');
+  button3=querySelector('#input');
+  button4=querySelector('#sum1');
+  button5=querySelector('#delete1');
+  button1.onClick.listen(addToDoItem);
+  button2.onClick.listen((e) {
+    toDoList1.children.clear();
+  });
+  button3.onClick.listen(addTry);
+  button4.onClick.listen(addNumber);
+  button5.onClick.listen((e) {
+    toDoList2.children.clear();
+  });
+  button5.onClick.listen(backsPace);
 }
 
-void reverseText(MouseEvent event) {
-  var text = querySelector('#sample_text_id').text;
-  var buffer = new StringBuffer();
-  for (int i = text.length - 1; i >= 0; i--) {
-    buffer.write(text[i]);
-  }
-  querySelector('#sample_text_id').text = buffer.toString();
+void addToDoItem(Event e) {
+  var newToDo = new InputElement();
+  var a,b,c;
+  a=int.parse(document.getElementById('input1').value);
+  b=int.parse(document.getElementById('input2').value);
+  c=a+b;
+  newToDo.value=c.toString();
+  toDoList1.children.add(newToDo);
 }
 
-
-
-void randomSelectStu(MouseEvent event) {
-  var stuMap = {
-    0:1213344345,
-    1:6786876872
-  };
-  var random = new math.Random();
-
-  var randomID = random.nextInt(2);
-  var stuID = stuMap[randomID];
-  querySelector('#sample_studentid_id').text = stuID.toString();
+void addTry(Event e) {
+  var newToDo = new InputElement();
+  newToDo.value = '';
+  toDoList2.children.add(newToDo);
 }
 
-  void add(MouseEvent event) {
-    var number1 = 3;
-    var number2 = 6;
-    var number3 = number1 + number2;
-    querySelector('#sample_sum_id').text = number3.toString();
-  }
-
-void adds(MouseEvent event) {
+void addNumber(Event e){
   var s=0;
-  for(var i=1;i<=100;i++)
-  {s=s+i;}
-  querySelector('#sample_sums_id').text =s.toString();
+  var i=0;
+  var a=int.parse(toDoList2.children[i].value);
+  do{                                                    //为什么不能用？
+    s=s+a;
+    i=i+1;
+    a=int.parse(toDoList2.children[i].value);
+  }while(a);                                            //
+  querySelector('#sum').text = s.toString();
+}
+
+void backsPace(Event e){
+  querySelector('#sum').text ='';
 }
