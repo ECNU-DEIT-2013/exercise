@@ -7,6 +7,7 @@ void main() {
    ..onClick.listen((MouseEvent e)=>add2(int.parse(querySelector('#txt1').value),int.parse(querySelector('#txt2').value),e));
  querySelector('#btn3')
     ..onClick.listen(clear);
+ toDoList=querySelector('#sample_todolist_id');
 }
 
 void add1(int m,int n, MouseEvent e){
@@ -19,7 +20,8 @@ void add1(int m,int n, MouseEvent e){
   }
   for(int i=m;i<=n;i++)
   {s=s+i;}
-  querySelector('#txt3').value=s.toString();
+ // querySelector('#txt3').value=s.toString();
+  document.getElementById("sample_add_id").value=s.toString();
 }
 
 void add2(int m,int n, MouseEvent e){
@@ -31,5 +33,5 @@ void add2(int m,int n, MouseEvent e){
 clear(MouseEvent event){
   querySelector('#txt1').value='';
   querySelector('#txt2').value='';
-  querySelector('#txt3').value='';
+  //querySelector('#txt3').value='';
   }
