@@ -18,32 +18,30 @@ void main() {
   toDoInput2.onChange.listen(addToDoItem2);
 
 
+
+
   querySelector('#sample_text_id')
 ..text = 'Click to obtain the result'
-..onClick.listen(add);
-
+..onClick.listen(add1);
+  toDoList3=querySelector('#to-do-list3');
+  toDoInput3.onChange.listen(addToDoItem3);
 }
 
 
 void addToDoItem1(Event e) {
   var newToDo1=new LIElement();
   newToDo1.text=toDoInput1.value;
-
   toDoList1.children.add(newToDo1);}
 
 void addToDoItem2(Event e){
   var newToDo2=new LIElement();
   newToDo2.text=toDoInput2.value;
-
   toDoList2.children.add(newToDo2);}
 
-  void addToDoItem3(Event e){
-    var newToDo3=new LIElement();
-    newToDo3.text=toDoInput2.value;
-    toDoInput3.value='';
-    toDoList3.children.add(newToDo3);}
+  void addToDoItem3(Event e){;
+    toDoList3.children.add(add1);}
 
-void add(MouseEvent event) {
+void add1(MouseEvent event) {
   var i=int.parse(toDoInput1.value);
   var m=int.parse(toDoInput2.value);
   int s;

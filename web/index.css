@@ -1,5 +1,5 @@
 body {
-  background-color: #F8F8F8;
+  background-color: #CCCCFF;
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   font-weight: normal;
@@ -12,8 +12,8 @@ h2, p {
 }
 
 #sample_container_id {
-  width: 100%;
-  height: 100px;
+  width: 229px;
+  height: 35px;
   position: relative;
   border: 1px solid #ccc;
   background-color: #fff;
@@ -22,7 +22,7 @@ h2, p {
 #sample_text_id {
   color: #0074C1;
   font-size: 10pt;
-  text-align: inherit;
+  text-align: center;
   margin-top: 10px;
   -webkit-user-select: none;
   user-select: none;
