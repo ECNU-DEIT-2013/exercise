@@ -1,36 +1,24 @@
 import 'dart:html';
-import 'dart:core' ;
-//////////////////////
-InputElement num1;
-InputElement num2;
-InputElement num3;
-ButtonElement b1;
 
+//////////////////////
+InputElement todo_input;
+UListElement todo_list;
+ButtonElement delet_eall;
 ///////////////////////
 void main() {
-  b1=querySelector('#getadd')
-    ..onClick.listen(add);
-  querySelector('#sample_text_id')
-    ..onClick.listen(reverseText);
+  todo_input=querySelector('#todoinput');
+  todo_list=querySelector('#todolist');
+  delet_eall=querySelector('#deleteall');
+  delet_eall.onClick.listen((e)=>todo_list.children.clear());
+todo_list.onClick.listen((e)=>todo_list.firstChild.remove());
+
+  todo_input.onChange.listen(addItem);
 }
 
-//add function
-void add(MouseEvent event) {
-  num1 = querySelector('#first');
-  num2= querySelector('#second');
-  num3= querySelector('#last');
-  var n1= num1.value;
-  var n2=num2.value;
-  int n=int.parse(n1)+int.parse(n2);
- num3.value =n.toString();
-}
+void addItem(Event e){
+  var newtodo=new LIElement();
+  newtodo.text=todo_input.value;
+  todo_input.value='';
+  todo_list.children.add(newtodo);
 
-//1+2+3+4...+100 result
-void reverseText(MouseEvent event) {
-  int i=1;
-  int sum=0;
-  for(i;i<=100;i++) {
-    sum += i;
-  }
-  querySelector('#sample_text_id').text = sum.toString();
 }
