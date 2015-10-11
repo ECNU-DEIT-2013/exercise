@@ -1,33 +1,29 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
     <title>Myconference</title>
     <link rel="stylesheet" href="index.css">
-  </head>
-  <body>
-    <h1>Myconference</h1>
+</head>
+<body>
+<h1>Myconference</h1>
+<p>这是一个累加器（从较小的数字累加到较大的数字）!</p>
+<div id="sample_container_id">
 
-    <p>Hello add!</p>
-
-
-    <form action="form_action.asp" method="get">
-
-       <p>Number1 <input id="txt1" type="text" placeholder="请输入一个整数" /></p>
-       <p>Number2 <input id="txt2" type="text" placeholder="请输入一个整数" /></p>
-       <p> <input id="txt3" type="text" value=""></p>
-        <div>
-            <ul id="#sample_todolist_id" >
-            </ul>
-        </div>
-
-      <p><input id="btn1" type="button" value="累加">
-         <input id="btn2" type="button" value="加法">
-         <input id="btn3" type="button" value="清除"> </p>
-
-    <script type="application/dart" src="index.dart"></script>
-    <script src="packages/browser/dart.js"></script>
-
-  </body>
+    <div>
+        <p><input id="sample_todoinput1_id" type="text" placeholder="请输入一个整数"></p>
+        <p><input id="sample_todoinput_id" type="text" placeholder="请输入一个整数"></p>
+        <p> <input id="sample_button_id" type="button" value="删除">
+            <input id="btn3" type="button" value="清除">
+        </p>
+    </div>
+    <div>
+        <ul id="sample_todolist_id" >
+        </ul>
+    </div>
+</div>
+<script type="application/dart" src="index.dart"></script>
+<script src="packages/browser/dart.js"></script>
+</body>
 </html>

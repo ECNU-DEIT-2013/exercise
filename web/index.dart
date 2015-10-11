@@ -1,37 +1,38 @@
 import 'dart:html';
 import 'dart:math' as math;
-void main() {
- querySelector('#btn1')
-    ..onClick.listen((MouseEvent e)=>add1(int.parse(querySelector('#txt1').value),int.parse(querySelector('#txt2').value),e));
- querySelector('#btn2')
-   ..onClick.listen((MouseEvent e)=>add2(int.parse(querySelector('#txt1').value),int.parse(querySelector('#txt2').value),e));
- querySelector('#btn3')
+InputElement toDoInput;
+UListElement toDoList;
+ButtonElement DeleteAll;
+void main(){
+  toDoInput=querySelector('#sample_todoinput_id');
+  toDoList=querySelector('#sample_todolist_id');
+  DeleteAll=querySelector('#sample_button_id');
+  DeleteAll.onClick.listen((e) {toDoList.children.clear();});
+  toDoInput.onChange.listen(AddInput);
+  querySelector('#btn3')
     ..onClick.listen(clear);
- toDoList=querySelector('#sample_todolist_id');
 }
 
-void add1(int m,int n, MouseEvent e){
-  var s=0;
- if(m>n){
+void AddInput(Event e){
+  var newToDo=new InputElement();
+  var m,n;
+  var c=0;
+  m=int.parse(document.getElementById('sample_todoinput1_id').value);
+  n=int.parse(document.getElementById('sample_todoinput_id').value);
+  if(m>n){
     var temp;
     temp=m;
     m=n;
     n=temp;
   }
   for(int i=m;i<=n;i++)
-  {s=s+i;}
- // querySelector('#txt3').value=s.toString();
-  document.getElementById("sample_add_id").value=s.toString();
-}
-
-void add2(int m,int n, MouseEvent e){
-  var c=0;
-  c=m+n;
-  querySelector('#txt3').value=c.toString();
+  {c=c+i;}
+  newToDo.value=c.toString();
+  newToDo.onClick.listen((e)=>newToDo.remove());
+  toDoList.children.add(newToDo);
 }
 
 clear(MouseEvent event){
-  querySelector('#txt1').value='';
-  querySelector('#txt2').value='';
-  //querySelector('#txt3').value='';
-  }
+  querySelector('#sample_todoinput1_id').value='';
+  querySelector('#sample_todoinput_id').value='';
+}
