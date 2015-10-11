@@ -5,7 +5,7 @@ void main() {
     ..onClick.listen((MouseEvent e)=>add1(int.parse(querySelector('#txt1').value),int.parse(querySelector('#txt2').value),e));
  querySelector('#btn2')
    ..onClick.listen((MouseEvent e)=>add2(int.parse(querySelector('#txt1').value),int.parse(querySelector('#txt2').value),e));
-  querySelector('#btn3')
+ querySelector('#btn3')
     ..onClick.listen(clear);
 }
 
