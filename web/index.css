@@ -16,18 +16,133 @@ h1, p {
   height: 400px;
   position: relative;
   border: 1px solid #ccc;
-  background-color: #fff;
+  text-align: center;
 }
 
 #sample_text_id {
-  font-size: 24pt;
+  font-size: 20pt;
   text-align: center;
   margin-top: 140px;
   -webkit-user-select: none;
   user-select: none;
+  margin-left: 500px;
+  margin-right: 150px;
+  width:160px;
 }
 
-#addNumber_id{
-  font-size:40pt ;
+#sample_text1_id {
+  font-size: 20pt;
   text-align: center;
+  margin-top: 140px;
+  -webkit-user-select: none;
+  user-select: none;
+  margin-left: 250px;
+}
+#sample_studentid_id{
+  margin-top: 40px;
+  text-align: center;
+}
+#sample_add_id{
+  margin-top: 40px;
+  text-align: center;
+  margin-left: 250px;
+  width:150px;
+}
+#sample_numberone_id{
+  margin-top: 40px;
+  text-align: center;
+  position: relative;
+  width: 50px;
+}
+#sample_numbertwo_id{
+  margin-top: 40px;
+  text-align: center;
+  position: relative;
+  width: 50px;
+}
+#sample_student_id{
+  margin-top: 40px;
+  text-align: left;
+  position: relative;
+  width:100%;
+  margin-left: 50px;
+}
+#sample_symbol_id{
+  margin-top: 40px;
+  text-align: center;
+  position: relative;
+  width: 30px;
+}
+#sample_symbolx_id{
+  margin-top: 40px;
+  text-align: center;
+  position: relative;
+  width: 30px;
+}
+#sample_containleft_id{
+  text-align: left;
+  margin-left: 50px;
+}
+#sample_input_id{
+  font-size: 15pt;
+  text-align: center;
+  margin-top: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+  width:80px;
+}
+#sample_input1_id{
+  font-size: 15pt;
+  text-align: center;
+  margin-top: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+  width:80px;
+}
+#sample_input2_id{
+  font-size: 15pt;
+  text-align: center;
+  margin-top: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+  width:80px;
+}
+#sample_todotext_id{
+  font-size: 15pt;
+  text-align: center;
+  margin-top: 150px;
+  margin-left: 180px;
+  margin-right: 150px;
+  width:80px;
+}
+#sample_todolist_id{
+  font-size: 20pt;
+  text-align: center;
+  margin-top:50px;
+  margin-left: 500px;
+  margin-right: 10px;
+  width:80px;
+}
+#sample_button_id{
+  font-size: 15pt;
+  text-align: center;
+  margin-top: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+  width:100px;
+}
+#sample_denghao_id{
+  font-size: 15pt;
+  text-align: center;
+  margin-top: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+  width:50px;
+}
+#sample_explain_id{
+  font-size: 18pt;
+  text-align: center;
+  margin-top: 100px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
