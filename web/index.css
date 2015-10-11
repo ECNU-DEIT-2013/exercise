@@ -10,14 +10,31 @@ body {
 h1, p {
   color: #333;
 }
-#button_for_add{
 
+#sample_todolist_id{
+  font-size: 20pt;
+  text-align: center;
+  margin-top:50px;
+  margin-left: 50px;
+  margin-right: 10px;
+  width:20px;
+}
+#sample_button_id{
+  font-size: 15pt;
+  text-align: center;
+  margin-top: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+  width:100px;
 }
 #input1{
   width:20px;
-  margin-left: 45%;
+  margin-left: 35%;
 }
 #input2{
+  width:20px;
+}
+#sample_input1_id{
   width:20px;
 }
 #sample_container_id {
@@ -29,21 +46,13 @@ h1, p {
 }
 #sample_container_id2 {
   width: 100%;
-  height: 500px;
+  height: 200px;
   position: relative;
   border: 1px solid #ccc;
   background-color: #fff;
 }
 
 #sample_text_id {
-  font-size: 24pt;
-  text-align: center;
-  margin-top: 100px;
-  -webkit-user-select: none;
-  user-select: none;
-}
-
-#sample_text_id2 {
   font-size: 24pt;
   text-align: center;
   margin-top: 100px;
