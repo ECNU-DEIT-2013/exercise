@@ -1,14 +1,42 @@
 body {
-  background-color: #F8F8F8;
+  font-family: 'Open Sans', sans-serif;
+  background-color: WhiteSmoke;
+  margin: 15px;
+  color: black;
+}
+h1, p {
+  color: #333;
+}
+#button{
+  width: 50px;
+  height:20px;
+  color:blue;
+}
+#button2{
+  width:50px;
+  height:20px;
+  color:blue;
+}
+
+#to-do-input {
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   font-weight: normal;
-  line-height: 1.2em;
-  margin: 15px;
+  padding: 5px 0px 5px 5px;
+  width: 100%;
+  border: 1px solid Silver;
+  background-color: White;
 }
 
-h1, p {
-  color: #333;
+#to-do-list {
+  padding:0px;
+  margin:0px;
+  list-style-position:inside;
+}
+
+#to-do-list li {
+  padding:5px 0px 5px 5px;
+  border-bottom: 1px dotted Silver;
 }
 
 #sample_container_id {
