@@ -1,29 +1,39 @@
 import 'dart:html';
 import 'dart:math' as math;
-void main() {
+InputElement ToDoinput;
+UListElement a;
+ButtonElement clear;
+void main(){
+ToDoinput=querySelector('#num2');
+a=querySelector('#abc');
+clear=querySelector('#clear');
+ToDoinput.onChange.listen(addToTerm);
+clear.onClick.listen((e) => a.children.clear());
 
-querySelector('#sample_text_id')
-..text="click me!"
-..onClick.listen(result);
 }
-void Addnum() {
-  var c=0;
-  for (var i = 1; i < 101; i++)
-  {c=c+i;}
-querySelector('#text').text="Add 1 to 100,the result is:";
-  querySelector('#sample_text_id').text=c.toString();
-}
-void result(MouseEvent event){
- // var a= document.getElementById("text1").value;
-  //var b= document.getElementById("text2").value;
+
+void myText(MouseEvent event){
+ // var a= document.getElementById("Texta").value;
+ // var b= document.getElementById("Textb").value;
  // var A= int.parse(a);
-//  var B= int.parse(b);
-  Addnum();
-
+  //var B= int.parse(b);
+  //addNum(A,B);
 
 }
 void addNum(num a,num b){
   var m=a+b;
-  querySelector('#text').text="the result is:";
   querySelector('#sample_text_id').text=m.toString();
 }
+void addToTerm(Event e){
+  var newToDo=new InputElement();
+ var n=document.getElementById("num2").value;
+  var N=int.parse(n);
+  var m=document.getElementById("num1").value;
+  var M=int.parse(m);
+  var s=N+M;
+  newToDo.value=s.toString();
+  a.children.add(newToDo);
+  newToDo.onClick.listen((e) => newToDo.remove());
+
+}
+
