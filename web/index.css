@@ -1,0 +1,93 @@
+body {
+  background-color: #F8F8F8;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.2em;
+  margin: 15px;
+}
+
+
+h1, p {
+  color: #333;
+}
+
+
+#sample_container_id {
+  width: 100%;
+  height:300px;
+  position: relative;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+#sample_add_id {
+  width: 100%;
+  height:200px;
+  position: relative;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  padding:0px;
+  margin:0px;
+  list-style-position:inside;
+}
+#sample_text_id {
+  font-size: 25pt;
+  text-align: center;
+  margin-top: 20px;
+  -webkit-user-select: none;
+  user-select: none;
+  color:#0080FF;
+}
+#introduction{
+  font-size:14pt;
+  margin-top: 10px;
+}
+#button_add_id1{
+  font-size:15pt;
+  width:50px;
+  color:#333333;
+}
+
+
+#a{
+  font-size:15pt;
+  margin-top: 30px;
+  text-align: center;
+}
+#b{
+  font-size:15pt;
+  text-align: center;
+}
+#c{
+  font-size:18pt;
+  text-align:center;
+}
+
+#add_1_To_100{
+  font-size:15pt;
+  text-align:center;
+}
+#button_add_id2{
+  font-size:10pt;
+  width:30px;
+  color:#333333;
+}
+#result{
+  font-size:18pt;
+  text-align:center;
+}
+#m{
+  padding:5px 0px 5px 5px;
+  margin:0px;
+  list-style-position:inside;
+  border-bottom:1px dotted Silver;
+}
+#to-do-list {
+  /*设置内边距*/
+  padding: 0px;
+  /*设置外边距*/
+  margin: 0px;
+  /*设置在何处放置列表项标记*/
+  list-style-position: inside;
+}
+
