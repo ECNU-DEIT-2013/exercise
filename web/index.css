@@ -1,6 +1,6 @@
 body {
   background-color: #F8F8F8;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Arial', sans-serif;
   font-size: 14px;
   font-weight: normal;
   line-height: 1.2em;
@@ -8,15 +8,16 @@ body {
 }
 
 h1, p {
-  color: #333;
+  color:#000000;
 }
 
 #sample_container_id {
   width: 100%;
   height: 400px;
   position: relative;
-  border: 1px solid #ccc;
-  background-color: #fff;
+  text-align:center;
+  border: 1px solid #000000;
+  background-color: #00B5AB;
 }
 
 #sample_text_id {
@@ -25,4 +26,12 @@ h1, p {
   margin-top: 140px;
   -webkit-user-select: none;
   user-select: none;
+}
+
+#display{
+  font-size:12pt;
+  position:relative;
+  text-align:left;
+  color:#333333;
+  margin-bottom:10px;
 }
