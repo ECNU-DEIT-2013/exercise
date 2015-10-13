@@ -18,34 +18,37 @@ h1, p {
   border: 1px solid #ccc;
   background-color: #fff;
 }
-
-#sample_text_id {
+#sample_studentid_id {
   font-size: 24pt;
   text-align: center;
-  margin-top: 140px;
   -webkit-user-select: none;
   user-select: none;
 }
-#sample_studentid_id {
-  font-size: 20pt;
-  text-align: center;
+#toDoList {
+  font-size: 24pt;
+  text-align: left;
   -webkit-user-select: none;
   user-select: none;
 }
-#text1{
-  margin-left:500px;
-  text-align: center;
-}
-#text2{
-  text-align: center;
-}
-#botton1_id{
-  font-size: 10pt;
+#toDoList2 {
+  font-size: 24pt;
+  text-align: left;
   -webkit-user-select: none;
   user-select: none;
 }
-#botton2_id{
-  font-size: 10pt;
+#toDoLi li{
+  font-size: 16pt;
+  text-align: left;
+  color: #005f8e;
   -webkit-user-select: none;
   user-select: none;
+}
+
+#Yiwen{
+  margin-top: 50px;
+  text-align: left;
+}
+
+#delete-all:hover {
+  background-color: #ddd;
 }
