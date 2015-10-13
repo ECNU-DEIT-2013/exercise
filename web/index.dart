@@ -11,7 +11,6 @@ void main() {
   toDoList = querySelector('#to-do-list');
 
   querySelector('#sample_text_id')
-    ..text = 'Click me!'
     ..onClick.listen((MouseEvent e)=>randomStudentID("you!",e));
   querySelector('#sample_text_id2')
     ..text = '1+..+100=?'
@@ -25,7 +24,7 @@ void addToDoItem(Event e) {
 
   var newToDo = new LIElement();
   newToDo.text =toDoInput1.value+"+"+toDoInput2.value+ "="+toDoInput.value;
-  querySelector('#button').value = 'answer';
+  querySelector('#button').value = 'Start';
 
   toDoList.children.add(newToDo);
 }

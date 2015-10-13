@@ -10,19 +10,27 @@ body {
 h1, p {
   color: #333;
 }
-
-#sample_container_id {
+#sample_add {
   width: 100%;
-  height: 400px;
+  height: 200px;
   position: relative;
   border: 1px solid #ccc;
   background-color: #fff;
 }
 
+#sample_container_id {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  border: 1px solid #ccc;
+  background-color:#cccccc;
+}
+
 #sample_text_id {
-  font-size: 24pt;
+  font-size: 20pt;
+  color: #333333;
   text-align: center;
-  margin-top: 140px;
+  margin-top: 60px;
   -webkit-user-select: none;
   user-select: none;
 }
@@ -34,9 +42,16 @@ h1, p {
   user-select: none;
 }
 #sample_text_id3 {
-  font-size: 26pt;
+  font-size: 24pt;
   text-align: center;
   margin-top: 40px;
+  -webkit-user-select: none;
+  user-select: none;
+}
+#sample_text_id4 {
+  font-size: 26pt;
+  text-align: left;
+  margin-top: 20px;
   -webkit-user-select: none;
   user-select: none;
 }
@@ -56,5 +71,18 @@ h1, p {
 #to-do-list li {
   padding:5px 0px 5px 5px;
   border-bottom: 1px dotted Silver;
+}
+#to-do-input {
+  padding:6px 1px 6px 6px;
+}
+#button{
+  padding:6px 20px 6px 16px;
+}
+#to-do-input1 {
+  padding:6px 1px 6px 6px;
+  margin:5px;
+}
+#to-do-input2 {
+  padding:6px 1px 6px 6px;
 }
 
