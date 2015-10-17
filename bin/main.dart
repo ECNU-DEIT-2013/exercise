@@ -6,14 +6,24 @@ main() async {
 
   await for (var request in server) {
     //List<String> a=["mengmeng","leilei"];
-    request.response
+    HttpResponse res = request.response;
+    addCorsHeaders(res);
+    res
       ..headers.contentType = new ContentType("application", "json", charset: "utf-8")
       ..write(
         '''[
-  "111", "222"
+  "111", "222","333","444"
 ]'''
 
     )
       ..close();
+
+
   }
+}
+
+void addCorsHeaders(HttpResponse res) {
+  res.headers.add("Access-Control-Allow-Origin", "*");
+  res.headers.add("Access-Control-Allow-Methods", "POST, GET, OPTIONS");
+  res.headers.add("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 }

@@ -27,8 +27,8 @@ void main() {
   }
 
 Future makeRequest(Event e) async {
-  var path = 'https://www.dartlang.org/f/portmanteaux.json';
-  //var path = 'http://127.0.0.1:8080';
+  //var path = 'https://www.dartlang.org/f/portmanteaux.json';
+  var path = 'http://127.0.0.1:8080';
   try {
     processString(await HttpRequest.getString(path));
   } catch (e) {
