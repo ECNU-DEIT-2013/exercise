@@ -1,44 +1,29 @@
 <!DOCTYPE html>
 
+<!--
+  Copyright (c) 2012, the Dart project authors.
+  Please see the AUTHORS file for details.
+  All rights reserved. Use of this source code
+  is governed by a BSD-style license that can be
+  found in the LICENSE file.
+-->
+
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Myconference</title>
-    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portmanteaux</title>
+    <script async type="application/dart" src="main.dart"></script>
+    <script async src="packages/browser/dart.js"></script>
+    <link rel="stylesheet" href="styles.css">
   </head>
+
   <body>
-    <h1>Myconference</h1>
-
-    </div>
-  <div>
-    <p>点开始两次，出现两个框，填入要加的数。
-      计算完，点清除键清除，再按开始键，弹出输入框后能继续计算</p>
-    <Button id="button" >开始</Button>
-    <Button id="button2">加起来</Button>
-    <Button id="button3">清除</Button>
-  </div>
-
-
-    <div>
-      <ul id="to-do-list">
-      </ul>
-    </div>
-
-    <div>
-      <p>result：</p>
-      <p id="result"></p>
-    </div>
-
-
-    <p>Hello world from Dart!</p>
-    <div id="sample_container_id">
-      <p id="sample_text_id">1+2+3+``+100=!</p>
-      <p id="sample_studentid_id"></p>
-    </div>
-
-
-
-    <script type="application/dart" src="index.dart"></script>
-    <script src="packages/browser/dart.js"></script>
+    <h1>Portmanteaux</h1>
+        
+    <button id="getWords">Get portmanteaux</button>
+    
+    <ul id="wordList">
+    </ul>
   </body>
 </html>
