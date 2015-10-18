@@ -17,13 +17,13 @@ main() async {
   print("Serving at ${server.address}:${server.port}");
 
   await for (var request in server) {
-    //handleOptions(request);
+    handleOptions(request);
    //request.response.listen(addCorsHeaders());
     var JTxt1 ='['+'"portmanteau", "fantabulous", "spork", "smog","spanglish", "gerrymander", "turducken", "stagflation","bromance", "freeware", "oxbridge", "palimony", "netiquette","brunch", "blog", "chortle", "Hassenpfeffer", "Schnitzelbank"'+']' ;
-   request.response.headers
-    ..add('Access-Control-Allow-Origin', '*')
-    ..add('Access-Control-Allow-Methods', 'POST, OPTIONS')
-    ..add('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+   //request.response.headers
+   // ..add('Access-Control-Allow-Origin', '*')
+   // ..add('Access-Control-Allow-Methods', 'POST, OPTIONS')
+   // ..add('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
 
     request.response
       ..headers.contentType = new ContentType("application","json", charset: "utf-8")
