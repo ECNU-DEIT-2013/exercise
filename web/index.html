@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 
+<!--
+  Copyright (c) 2012, the Dart project authors.
+  Please see the AUTHORS file for details.
+  All rights reserved. Use of this source code
+  is governed by a BSD-style license that can be
+  found in the LICENSE file.
+-->
+
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Myconference</title>
-    <link rel="stylesheet" href="index.css">
-    <script type="application/dart" src="index.dart"></script>
-    <script src="packages/browser/dart.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portmanteaux</title>
+    <script async type="application/dart" src="main.dart"></script>
+    <script async src="packages/browser/dart.js"></script>
+    <link rel="stylesheet" href="styles.css">
   </head>
-  <body>
-    <h1>Myconference</h1>
-    <p>Hello world from Dart!</p>
 
-    <div id="sample_container_id">
-      <p style="margin-left: 350px;margin-top:80px">
-        <input type="text" name="todoinput" id="todoinput" style="height: 25px;width: 200px;"placeholder="what do you want to do"><br></p>
-        <input type="button" name="deleteall" id="deleteall"style="height: 25px;width: 60px;margin-left: 350px;margin-top:10px" value="All Done">
-      <div id="list" style="color: coral;font-size: 10pt;
-         margin-left: 350px;margin-top:30px"><ul id="todolist" name="todolist" ></ul></div>
-    </div>
+  <body>
+    <h1>Portmanteaux</h1>
+        
+    <button id="getWords">Get portmanteaux</button>
+    
+    <ul id="wordList">
+    </ul>
   </body>
 </html>
