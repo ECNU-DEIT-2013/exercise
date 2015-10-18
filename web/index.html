@@ -1,27 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title></title>
-  <link rel="stylesheet" href="index.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portmanteaux</title>
+  <script async type="application/dart" src="index.dart"></script>
+  <script async src="packages/browser/dart.js"></script>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-<div id="jiafa"  >
-  <p>加法计算器</p>
-</div>
-<div id="jisuanquyu">
-  <input type="text" id="text1" name="yourname" size="30" maxlength="20" />
-  <input type="button" value="加到"/>
-  <input type="text" id="text2"  size="30" maxlength="20" />
-  <input type="button" id="button" value="=" />
-  <input type="text" id="text3"  size="30" maxlength="20" />
-  <input type="button"id="button2" value="下一题"/>
-</div>
-<div id="xianshijieguo">
-  <ul id="ula">
-  </ul>
-</div>
-<script type="application/dart" src="index.dart" ></script>
-<script src="packages/browser/dart.js"></script>
+<h1>Portmanteaux</h1>
+
+<button id="getWords">Get portmanteaux</button>
+
+<ul id="wordList">
+</ul>
 </body>
 </html>
