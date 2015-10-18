@@ -1,9 +1,8 @@
-name: myconference
-version: 0.0.1
-description: A sample web application
+name: portmanteaux_simple
+description: A sample application
 dependencies:
-  browser: any
-  messenger: "^0.0.7"
-  polymer: ">=0.15.1 <0.17.0"
-dev_dependencies:
-  unittest: any
+  browser: ^0.10.0
+
+homepage: https://www.dartlang.org/docs/tutorials/fetchdata/
+gist: https://gist.github.com/Sfshaza/8640071ecb67b1309938
+dartpad: https://dartpad.dartlang.org/8640071ecb67b1309938
