@@ -1,50 +1,29 @@
 <!DOCTYPE html>
 
+<!--
+  Copyright (c) 2012, the Dart project authors.
+  Please see the AUTHORS file for details.
+  All rights reserved. Use of this source code
+  is governed by a BSD-style license that can be
+  found in the LICENSE file.
+-->
+
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Myconference</title>
-  <link rel="stylesheet" href="index.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portmanteaux</title>
+  <script async type="application/dart" src="main.dart"></script>
+  <script async src="packages/browser/dart.js"></script>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+<h1>Portmanteaux</h1>
 
-<h2>Addition</h2>
+<button id="getWords">Get portmanteaux</button>
 
-<div>Addend:
-    <input id="to-do-input1"
-           type="text"
-           value=""
-            align="center">
-</div>
-<div>
-    <ul id="to-do-list1">
-    </ul>
-</div>
-
-
-<div> Addend:
-        <input id="to-do-input2"
-               type="text"
-               value="">
-</div>
-<div>
-        <ul id="to-do-list2">
-        </ul>
-</div>
-
-
-<h1></h1>
-<div id="sample_container_id">
-  <p id="sample_text_id">Click</p>
-  <p id="sample_studentid_id"></p>
-</div>
-<div>
-    <ul id="to-do-list3">
-    </ul>
-</div>
-<script type="application/dart" src="index.dart"></script>
-<script src="packages/browser/dart.js"></script>
-
-
+<ul id="wordList">
+</ul>
 </body>
 </html>
