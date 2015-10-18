@@ -1,31 +1,20 @@
 <!DOCTYPE html>
-
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>Myconference</title>
-  <link rel="stylesheet" href="index.css">
-</head>
-<body>
-<h1>Myconference</h1>
+ <head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Portmanteaux</title>
+   <script async type="application/dart" src="index.dart"></script>
+   <script async src="packages/browser/dart.js"></script>
+   <link rel="stylesheet" href="styles.css">
+ </head>
 
-<p>Welcome!</p>
+ <body>
+  <h1>Portmanteaux</h1>
 
-</div>
+  <button id="getWords">Get portmanteaux</button>
 
-<div id="sample_container_id2">
-  <p>欢迎使用计算器，输入数字，选择算法：</p>
-  <input id="input1" > </input>
-  <button id="button_for_add" aria-label="加"></button>
-    <button id="button_for_sub" aria-label="减"></button>
-      <button id="button_for_mul" aria-label="乘"></button>
-        <button id="button_for_div" aria-label="除"></button>
-          <input id="input2"> </input>
-          =<p id="sample_text_id2"></p>
-
-</div>
-
-<script type="application/dart" src="index.dart"></script>
-<script src="packages/browser/dart.js"></script>
-</body>
-<html>
+  <ul id="wordList">
+ </ul>
+ </body>
+</html>
