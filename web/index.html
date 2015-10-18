@@ -1,40 +1,29 @@
+<!DOCTYPE html>
+
+<!--
+  Copyright (c) 2012, the Dart project authors.
+  Please see the AUTHORS file for details.
+  All rights reserved. Use of this source code
+  is governed by a BSD-style license that can be
+  found in the LICENSE file.
+-->
+
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>Myconference</title>
-  <link rel="stylesheet" href="index.css">
-</head>
-<body>
-<h1>Myconference</h1>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portmanteaux</title>
+    <script async type="application/dart" src="main.dart"></script>
+    <script async src="packages/browser/dart.js"></script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
 
-
-<p>Hello world from Dart!</p>
-<div id="sample_container_id">
-<p id="sample_text_id">ADD PROJECT</p>
-<p id="introduction">Please input the numbers in the textbox you want to add first.
-  <br><br>Then click the "=" button to get your result!</p>
-
-<input id="a"> + <input id="b">
-<button id="button_add_id1"  text="=">=</button>
-<p id="c">The result of the addition!</p>
-</div>
-<br>
-<div id="sample_add_id">
-  <p id="add_1_To_100">1+2+3+……+
-    <input id="num" placeholder="Input a number">
-    <button id="button_add_id2">=</button></p>
-  <p id="result">The result of the addition!</p>
-
-  <div>
-    <ul id="to-do-list"></ul>
-  </div>
-</div>
-
-
-
-<script type="application/dart" src="index.dart"></script>
-<script src="packages/browser/dart.js"></script>
-
-
-</body>
+  <body>
+    <h1>Portmanteaux</h1>
+        
+    <button id="getWords">Get portmanteaux</button>
+    
+    <ul id="wordList">
+    </ul>
+  </body>
 </html>
