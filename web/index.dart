@@ -1,27 +1,38 @@
-import 'dart:io';
+// Copyright (c) 2012, the Dart project authors.  
+// Please see the AUTHORS file for details. 
+// All rights reserved. Use of this source code 
+// is governed by a BSD-style license that can be 
+// found in the LICENSE file.
 
-main() async {
-  var server = await HttpServer.bind(InternetAddress.LOOPBACK_IP_V4, 8080);
-  print("Serving at ${server.address}:${server.port}");
+import 'dart:html';
+import 'dart:convert';
 
-  await for (var request in server) {
-    HttpResponse res = request.response;
-    addCorsHeaders(res);
-    request.response
-      ..headers.contentType = new ContentType("application", "json", charset: "utf-8")
-      ..write('''[
-  "portmanteau", "fantabulous", "spork", "smog",
-  "spanglish", "gerrymander", "turducken", "stagflation",
-  "bromance", "freeware", "oxbridge", "palimony", "netiquette",
-  "brunch", "blog", "chortle", "Hassenpfeffer", "Schnitzelbank"
-]'''
-    )
-      ..close();
-  }
+var wordList;
+
+void main() {
+  querySelector('#getWords').onClick.listen(makeRequest);
+  wordList = querySelector('#wordList');
 }
 
-void addCorsHeaders(HttpResponse res) {
-  res.headers.add("Access-Control-Allow-Origin", "*");
-  res.headers.add("Access-Control-Allow-Methods", "POST, GET, OPTIONS");
-  res.headers.add("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+void makeRequest(Event e) {
+  var path = 'http://127.0.0.1:8080';
+  var httpRequest = new HttpRequest();
+  httpRequest
+    ..open('GET', path)
+    ..onLoadEnd.listen((e) => requestComplete(httpRequest))
+  //onloadend?????????????????requestcomplete
+    ..send('');
+  //..???????????
+}
+
+requestComplete(HttpRequest request) {
+  if (request.status == 200) {
+    List<String> portmanteaux = JSON.decode(request.responseText);
+    for (int i = 0; i < portmanteaux.length; i++) {
+      wordList.children.add(new LIElement()..text = portmanteaux[i]);
+    }
+  } else {
+    wordList.children.add(new LIElement()
+      ..text = 'Request failed, status=${request.status}');
+  }
 }
