@@ -1,110 +1,12 @@
 body {
-  position: relative;
   background-color: #F8F8F8;
   font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: normal;
   line-height: 1.2em;
   margin: 15px;
 }
 
-h1, p {
+h1, p, li {
   color: #333;
-}
-
-#sample_container_id {
-  width: 100%;
-  height: 500px;
-  position: relative;
-  border: 1px solid #ccc;
-  background-color: #fff;
-}
-
-#sample_ask_id {
-  position: relative;
-  left: 10px;
-  font-size: 24pt;
-  text-align: center;
-  margin-top: 60px;
-  -webkit-user-select: none;
-  user-select: none;
-}
-
-#sum{
-  background-color: white;
-  font-family: 'Open Sans', sans-serif;
-  position: relative;
-  font-size: 14pt ;
-  top: 50px;
-  margin-left: 7%;
-}
-
-#mul{
-  background-color: white;
-  font-family: 'Open Sans', sans-serif;
-  position: relative;
-  font-size: 14pt ;
-  top:20px;
-  margin-left: 55%;
-}
-#A{
-  top:30px;
-  left:200px;
-  position: relative;
-  font-size: 18pt;
-}
-#B{
-  top:-20px;
-  left:600px;
-  position: relative;
-  font-size: 18pt;
-}
-#text1{
-  text-align: center;
-  height: 80px;
-  width: 200px;
-  top:-20px;
-  left:250px;
-  position: relative;
-  font-size: 18pt;
-}
-#text2{
-  text-align: center;
-  height: 80px;
-  width: 200px;
-  top:-20px;
-  left:450px;
-  position: relative;
-  font-size: 18pt;
-}
-#text3{
-  text-align: center;
-  width: 400px;
-  height: 100px;
-  top: 100px;
-  left: -50px;
-  position: relative;
-  font-size: 20pt;
-}
-#enter{
-  background-color: #F8F8F8;
-  top: 0;
-  left: 200px;
-  height: 50px;
-  width:100px;
-  text-align: center;
-  position: relative;
-  font-size: 18px;
-}
-#sign1{
-  top: -10px;
-  left:150px;
-  position: relative;
-  font-size:48px;
-}
-#sign2{
-  top: -20px;
-  left: 70px;
-  position: relative;
-  font-size:48px;
 }

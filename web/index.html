@@ -1,31 +1,29 @@
 <!DOCTYPE html>
 
+<!--
+  Copyright (c) 2012, the Dart project authors.
+  Please see the AUTHORS file for details.
+  All rights reserved. Use of this source code
+  is governed by a BSD-style license that can be
+  found in the LICENSE file.
+-->
+
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Myconference</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portmanteaux</title>
+  <script async type="application/dart" src="index.dart"></script>
+  <script async src="packages/browser/dart.js"></script>
   <link rel="stylesheet" href="index.css">
 </head>
-<body>
-<h1>Myconference</h1>
 
-<p>Hello world from Dart!</p>
-<div id="sample_container_id">
-  <p id="sample_ask_id">Please input A and B then click one as your requirement</p>
-  <p id="button">
-    <input type="button" id="sum" value="the sum of all the numbers from A to B"/>
-    <input type="button" id="mul" value="the multiply of all the numbers from A to B"/>
-  </p>
-  <p id="A">A:</p>
-  <p id="B">B:</p>
-  <input type="text" id="text1"/>   <!--输入文本1-->
-  <input type="text" id="text2"/>   <!--输入文本2-->
-  <input type="text" id="text3"/>  <!--结果文本-->
-  <input type="button" id="enter" value="resume"/>
-  <p id="sign1"></p>
-  <p id="sign2"></p>
-</div>
-<script type="application/dart" src="index.dart"></script>
-<script type="package/browser/dart.js"></script>
+<body>
+<h1>Portmanteaux</h1>
+
+<button id="getWords">Get portmanteaux</button>
+
+<ul id="wordList">
+</ul>
 </body>
 </html>

@@ -1,35 +1,37 @@
+// Copyright (c) 2012, the Dart project authors.  
+// Please see the AUTHORS file for details. 
+// All rights reserved. Use of this source code 
+// is governed by a BSD-style license that can be 
+// found in the LICENSE file.
+
 import 'dart:html';
+import 'dart:convert';
+
+var wordList;
 
 void main() {
-  querySelector('#sample_ask_id')
-    ..text = 'Please input A and B then click one as your requirement';
-  querySelector('#sum').onClick.listen((MouseEvent event) => sum(int.parse(document.getElementById("text1").value),int.parse(document.getElementById("text2").value),event));
-  querySelector('#mul').onClick.listen((MouseEvent event) => multiply(int.parse(document.getElementById("text1").value),int.parse(document.getElementById("text2").value),event));
-  querySelector('#enter').onClick.listen(clean);
-}
-void clean(MouseEvent event){
-  querySelector('#text1').value = null;
-  querySelector('#text2').value = null;
-  querySelector('#text3').value = null;
-  querySelector('#sign1').text = '';
-  querySelector('#sign2').text = '';
-}
-void sum(int n1,n2,MouseEvent event){
-  querySelector('#sign1').text = 'sum';
-  querySelector('#sign2').text = '';
-  int s=0;
-  for(int i = n1; i <= n2; i++){
-    s=s+i;
-  }
-  querySelector('#text3').value = s.toString();
+  querySelector('#getWords').onClick.listen(makeRequest);
+  wordList = querySelector('#wordList');
 }
 
-void multiply(int n1,n2, MouseEvent event) {
-  querySelector('#sign1').text = '';
-  querySelector('#sign2').text = 'multiply';
-  int s = 1;
-  for (int i = n1; i <= n2; i++) {
-    s = s * i;
+void makeRequest(Event e) {
+  var path = 'http://127.0.0.1:8080/';
+  var httpRequest = new HttpRequest();
+  httpRequest
+    ..open('get', path)
+    ..onLoadEnd.listen((e) => requestComplete(httpRequest))
+    ..send('');
+}
+
+requestComplete(HttpRequest request) {
+  if (request.status == 200) {
+    List<String> portmanteaux = JSON.decode(request.responseText);
+    for (int i = 0; i < portmanteaux.length; i++) {
+      wordList.children.add(new LIElement()
+        ..text = portmanteaux[i]);
+    }
+  } else {
+    wordList.children.add(new LIElement()
+      ..text = 'Request failed, status=${request.status}');
   }
-  querySelector('#text3').value = s.toString();
 }
