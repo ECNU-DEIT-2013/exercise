@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/html">
-<head>
-  <meta charset="utf-8">
-  <title>Myconference</title>
-  <link rel="stylesheet" href="index.css">
-</head>
-<body>
-<h1>加法器</h1>
+<!--
+  Copyright (c) 2012, the Dart project authors.
+  Please see the AUTHORS file for details.
+  All rights reserved. Use of this source code
+  is governed by a BSD-style license that can be
+  found in the LICENSE file.
+-->
 
-<p>10130340210 周钰婕</p>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portmanteaux</title>
+    <script async type="application/dart" src="main.dart"></script>
+    <script async src="packages/browser/dart.js"></script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
 
-<ul id="sample_container_id">
-  <p id="sample_text_id">Input The Numbers First AND Click Me To Get The Result</p>
-  <input type="text" id="myTexta" value="Input A Number">+
-  <input type="text" id="myTextb" value="Input A Number">=
-</ul>
-<div id="sample_add">
- <ul id="sample_text_add">1+2+3+.....+100=</ul>
-  <p id="p1" >CLICK ME TO GET THE RESULT</p></div>
-  <div id="sample_add2">
-  <ul id="sample_text_add2">1+2+3+.....+ <input type="text" id="myTextx" value="Input A Number" >=</ul>
-  <p id="sample_text_result2">Input The Numbers First AND Click Me To Get The Result</p></div>
-
-<script type="application/dart" src="index.dart"></script>
-<script src="packages/browser/dart.js"></script>
-</body>
-<ml>
+  <body>
+    <h1>Portmanteaux</h1>
+        
+    <button id="getWords">Get portmanteaux</button>
+    
+    <ul id="wordList">
+    </ul>
+  </body>
+</html>
