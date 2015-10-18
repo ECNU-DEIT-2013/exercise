@@ -1,24 +1,65 @@
 <!DOCTYPE html>
-<html >
+
+<!--
+  Copyright (c) 2012, the Dart project authors.
+  Please see the AUTHORS file for details.
+  All rights reserved. Use of this source code
+  is governed by a BSD-style license that can be
+  found in the LICENSE file.
+-->
+
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>加法器</title>
-</head>
+      <meta charset="utf-8">
+      <title>Myconference</title>
+      <link rel="stylesheet" href="index.css">
+    </head>
 <body>
-<p id="sample_sum_id1"></p>
-</div>
-
-<p>--------------------------------------</p>
-<div>
-    <input id="kongge" type="text" value="">
-    <button id="button">+</button>
-   <input id="kongge1" type="text" value="">
-  <button id="to-do-button">=</button>
-  <input id="kongge2" type="text" value="">
-  </div>
+<h1>Myconference</h1>
+<p>Hello world from Dart!</p>
+<div id="sample_container_id">
+       <p id="sample_explain_id">点击“清空”按钮，清空数字；点击“删除”按钮，删除得数</p>
+     <div>
+         <input id="sample_todoinput1_id"
+                             type="text"
+                             placeholder="数字1">
+      <input id="sample_todoinput2_id"
+                       type="text"
+                       placeholder="+">
+   <input id="sample_todoinput_id"
+                          type="text"
+                         placeholder="数字2">
+      <input id="sample_qingkong_id"
+                               type="button"
+                             value="清空">
+        <input id="sample_button_id"
+                               type="button"
+                           value="删除">
+      </div>
+    <div>
+         <ul id="sample_todolist_id" >
+         </ul>
+    </div>
+    </div>
 <script type="application/dart" src="index.dart"></script>
+<script src="packages/browser/dart.js"></script>
 </body>
-
 </html>
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portmanteaux</title>
 
+      <link rel="stylesheet" href="styles.css">
+      </head>
+
+  <body>
+    <h1>Portmanteaux</h1>
+
+    <button id="getWords">Get portmanteaux</button>
+    <ul id="wordList"></ul>
+    <script async type="application/dart" src="main.dart"></script>
+    <script async src="packages/browser/dart.js"></script>
+  </body>
+</html>
 
