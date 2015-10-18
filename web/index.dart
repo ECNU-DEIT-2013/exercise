@@ -1,16 +1,32 @@
+import 'dart:async';
+import 'dart:convert';
 import 'dart:html';
-import 'dart:math' as math;
-import 'utility/people.dart';
+
+var wordList;
+
 void main() {
-  querySelector('#sample_text_id')
-    ..text = '1+2+3+...+100='
-    ..onClick.listen(add);
+  querySelector('#getWords').onClick.listen(makeRequest);
+  wordList = querySelector('#wordList');
 }
 
-void add(MouseEvent event) {
-  int x=0;
-  for (int i =  1; i <= 100; i++) {
-    x += i;
+Future makeRequest(Event e) async {
+  var path ='http://127.0.0.1:8080/';
+  //'https://www.dartlang.org/f/portmanteaux.json';
+  try {
+    processString(await HttpRequest.getString(path));
+  } catch (e) {
+    print('Couldn\'t open $path');
+    handleError(e);
   }
-  querySelector('#x').text = x.toString();
+}
+
+processString(String jsonString) {
+  List<String> portmanteaux = JSON.decode(jsonString);
+  for (int i = 0; i < portmanteaux.length; i++) {
+    wordList.children.add(new LIElement()..text = portmanteaux[i]);
+  }
+}
+
+handleError(Object error) {
+  wordList.children.add(new LIElement()..text = 'Request failed.');
 }
