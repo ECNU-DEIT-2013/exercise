@@ -6,7 +6,12 @@ main() async {
   await for (var request in server) {
     request.response
       ..headers.contentType = new ContentType("application", "json", charset: "utf-8")
-      ..write('[\n"portmanteau", "fantabulous", "spork", "smog","spanglish",\n"gerrymander", "turducken", "stagflation","bromance", "freeware",\n"oxbridge", "palimony", "netiquette","brunch", "blog",\n "chortle", "Hassenpfeffer", "Schnitzelbank" \n]')
+      ..write('''[
+  "portmanteau", "fantabulous", "spork", "smog",
+  "spanglish", "gerrymander", "turducken", "stagflation",
+  "bromance", "freeware", "oxbridge", "palimony", "netiquette",
+  "brunch", "blog", "chortle", "Hassenpfeffer", "Schnitzelbank"
+]''')
       ..close();
   }
 }
