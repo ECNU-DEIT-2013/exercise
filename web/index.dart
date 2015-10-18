@@ -1,33 +1,27 @@
-import 'dart:html';
-import 'dart:math' as math;
+var wordList;
 
 void main() {
- querySelector('#button_for_add')
-    ..text='+'
-    ..onClick.listen(addUpNumber);
-  querySelector('#sample_text_id2').text=addUp(0,0).toString();
- querySelector('#button_for_add1')
-   ..text='-'
-   ..onClick.listen(addUpNumber1);
- querySelector('#sample_text_id2').text=addUp(0,0).toString();
+  querySelector('#getWords').onClick.listen(makeRequest);
+  wordList = querySelector('#wordList');
 }
 
-void addUpNumber (MouseEvent event){
-  var x = int.parse(querySelector('#input1').value);
-  var y = int.parse(querySelector('#input2').value);
-  querySelector('#sample_text_id2').text=addUp(x,y).toString();
-}
-void addUpNumber1 (MouseEvent event){
-  var x = int.parse(querySelector('#input1').value);
-  var y = int.parse(querySelector('#input2').value);
-  querySelector('#sample_text_id2').text=addUp1(x,y).toString();
+void makeRequest(Event e) {
+  var path = 'https://www.dartlang.org/f/portmanteaux.json';
+  var httpRequest = new HttpRequest();
+  httpRequest
+    ..open('GET', path)
+    ..onLoadEnd.listen((e) => requestComplete(httpRequest))
+    ..send('');//''ø… °
 }
 
-int addUp(var x,var y){
-  var m=x+y;
-  return m;
-}
-int addUp1(var x,var y){
-  var n=x-y;
-  return n;
+requestComplete(HttpRequest request) {
+  if (request.status == 200) {
+    List<String> portmanteaux = JSON.decode(request.responseText);
+    for (int i = 0; i < portmanteaux.length; i++) {
+      wordList.children.add(new LIElement()..text = portmanteaux[i]);
+    }
+  } else {
+    wordList.children.add(new LIElement()
+      ..text = 'Request failed, status=${request.status}');
+  }
 }
