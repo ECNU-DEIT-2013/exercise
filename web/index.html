@@ -1,43 +1,29 @@
 <!DOCTYPE html>
 
+<!--
+  Copyright (c) 2012, the Dart project authors.
+  Please see the AUTHORS file for details.
+  All rights reserved. Use of this source code
+  is governed by a BSD-style license that can be
+  found in the LICENSE file.
+-->
+
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>10130340245_潘丽源</title>
-  <link rel="stylesheet" href="index.css">
-</head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portmanteaux</title>
+    <script async type="application/dart" src="main.dart"></script>
+    <script async src="packages/browser/dart.js"></script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
 
-<h1>Myconference</h1>
-
-<p>Hello world from Liyuan_Pan!</p>
-<div id="sample_container_id">
-  <p id="sample_text_id">Click me!</p>
-  <p id="sample_student_id"></p>
-</div>
-<br>
-
-<div id="sample_container_id2" align="center"><br>
-  <p id="text_for_add">Click me to start to add 2 numbers</p>
-  <br><br><br>
-  <div id="add2_num1" ></div><br>  + <br><br>
-  <div id="add2_num2" ></div>
-
-
-  <br><br>
-  <button id="button_for_add"></button>
-  <p id="result_of_add2" align="center">Answer hides here</p>
-  <p id="clear" ></p>
-</div>
-<br>
-
-<div id="container_addTo100">
-  <p id="text_id3">1+2+3+....+100=?</p><br><br>
-  <p id="text_for_addTo100">Click to find the answer</p>
-</div>
-<br>
-
-
-<script type="application/dart" src="index.dart"></script>
-<script src="packages/browser/dart.js"></script>
-</body>
+  <body>
+    <h1>Portmanteaux</h1>
+        
+    <button id="getWords">Get portmanteaux</button>
+    
+    <ul id="wordList">
+    </ul>
+  </body>
 </html>
