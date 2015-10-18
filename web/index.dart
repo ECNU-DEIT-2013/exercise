@@ -1,22 +1,34 @@
 import 'dart:html';
-InputElement x;
-InputElement y;
+import 'dart:convert';
+
+var wordList;
+
 void main() {
-  x=querySelector('#x');
-  y=querySelector('#y');
-  querySelector('#eq').onClick.listen(add);
-
+  querySelector('#getWords').onClick.listen(makeRequest);
+  wordList = querySelector('#wordList');
 }
 
-void add(Event e){
-  var newx=new LIElement();
-  newx.value= int.parse(x.value);
-  var newy=new LIElement();
-  newy.value= int.parse(y.value);
-  int z=newx.value+newy.value;
-  querySelector('#z').value=z.toString();
+void makeRequest(Event e) {
+  var path = 'http://127.0.0.1:8080/';
+  var httpRequest = new HttpRequest();
+  //httpRequest  httpЭ�顣
+  httpRequest
+    ..open('GET', path)
+    ..onLoadEnd.listen((e) => requestComplete(httpRequest))
+    ..send('');
 }
 
+requestComplete(HttpRequest request) {
+  if (request.status == 200) {
+    List<String> portmanteaux = JSON.decode(request.responseText);
+    for (int i = 0; i < portmanteaux.length; i++) {
+      wordList.children.add(new LIElement()..text = portmanteaux[i]);
+    }
+  } else {
+    wordList.children.add(new LIElement()
+      ..text = 'Request failed, status=${request.status}');
+  }
+}
 
 
 
