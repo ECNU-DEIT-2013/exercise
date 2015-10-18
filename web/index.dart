@@ -18,7 +18,7 @@ void makeRequest(Event e) {
 }
 
 requestComplete(HttpRequest request) {
-  if (request.status == 200) {
+  if(request.status == 200) {
     List<String> portmanteaux = JSON.decode(request.responseText);
     for (int i = 0; i < portmanteaux.length; i++) {
       wordList.children.add(new LIElement()..text = portmanteaux[i]);
