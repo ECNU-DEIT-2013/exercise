@@ -33,4 +33,3 @@ void numReset(MouseEvent event) {
   toDoInput1.value = '';
   toDoInput2.value = '';
 }
-
