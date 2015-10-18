@@ -33,3 +33,24 @@ void delete(Event e){
   toDoInput1.value='';
   toDoInput2.value='';
 }
+
+import 'dart:io';
+import 'dart:convert' show UTF8, JSON;
+
+main() async {
+  List jsonData= [ "portmanteau", "fantabulous", "spork", "smog",
+  "spanglish", "gerrymander", "turducken", "stagflation",
+  "bromance", "freeware", "oxbridge", "palimony", "netiquette",
+  "brunch", "blog", "chortle", "Hassenpfeffer", "Schnitzelbank"]
+
+  ;
+  var server = await HttpServer.bind(InternetAddress.LOOPBACK_IP_V4, 8080);
+  print("Serving at ${server.address}:${server.port}");
+
+  await for (var request in server) {
+    request.response
+      ..headers.contentType = new ContentType("application", "json", charset: "utf-8")
+      ..write(JSON.encode(jsonData))
+      ..close();
+  }
+}
