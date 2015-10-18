@@ -1,43 +1,30 @@
 import 'dart:html';
+import 'dart:convert';
 
-InputElement T1,T2;
-UListElement toDoList;
+var wordList;
 
 void main() {
-  T1= querySelector('#text1');
-  T2= querySelector('#text2');
-  querySelector('#text1').value = 1.toString();
-  querySelector('#button').onClick.listen((MouseEvent e)=>pluse(int.parse(document.getElementById("text1").value),e));
-  toDoList = querySelector('#to-do-list');
-  querySelector('#button2').onClick..listen(addToDoItem);
-}
-void pluse(int n1,MouseEvent e){
-  int s=0, a=5;
-  for(int i = n1;;i++){
-    s=5+i;
-  }
-  querySelector('#text2').value=s.toString();
-}
-void addToDoItem(MouseEvent e) {
-  var newToDo = new LIElement();
-  newToDo.text =querySelector('#text2').value;
-  T1.value = '';T2.value='';
-  toDoList.children.add(newToDo);
+  querySelector('#getWords').onClick.listen(makeRequest);
+  wordList = querySelector('#wordList');
 }
 
-void add(MouseEvent event) {
-  var sum = 0;
-  for (var i = 0;i <= 100;i++) {
-    sum = sum + i;
-  }
-  querySelector('#sample_text_id').text = sum.toString();
+void makeRequest(Event e) {
+  var path = 'http://127.0.0.1:8080';
+  var httpRequest = new HttpRequest();
+  httpRequest
+    ..open('GET', path)
+    ..onLoadEnd.listen((e) => requestComplete(httpRequest))
+    ..send('');
 }
 
-void reverseText(MouseEvent event) {
-  var text = querySelector('#sample_text_id').text;
-  var buffer = new StringBuffer();
-  for (int i = text.length - 1; i >= 0; i--) {
-    buffer.write(text[i]);
+requestComplete(HttpRequest request) {
+  if (request.status == 200) {
+    List<String> portmanteaux = JSON.decode(request.responseText);
+    for (int i = 0; i < portmanteaux.length; i++) {
+      wordList.children.add(new LIElement()..text = portmanteaux[i]);
+    }
+  } else {
+    wordList.children.add(new LIElement()
+      ..text = 'Request failed, status=${request.status}');
   }
-  querySelector('#sample_text_id').text = buffer.toString();
 }
