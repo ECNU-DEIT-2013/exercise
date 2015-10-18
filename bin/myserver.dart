@@ -7,7 +7,13 @@ main() async {
   await for (var request in server) {
     request.response
       ..headers.contentType = new ContentType("application", "json", charset: "utf-8")
-      ..write("123456789")
+      ..write('''[
+  "portmanteau", "fantabulous", "spork", "smog",
+  "spanglish", "gerrymander", "turducken", "stagflation",
+  "bromance", "freeware", "oxbridge", "palimony", "netiquette",
+  "brunch", "blog", "chortle", "Hassenpfeffer", "Schnitzelbank"
+]''')
+
       ..close();
   }
 }
