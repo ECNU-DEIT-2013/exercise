@@ -5,6 +5,10 @@ void addCorsHeaders(HttpResponse res) {
   res.headers.add('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.headers.add('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
 }
+/**
+ * 次出函数做什么的，没有用到？
+ * 另外，为何有代维的提交？
+ */
 void handleOptions(HttpRequest req) {
   HttpResponse res = req.response;
   addCorsHeaders(res);
