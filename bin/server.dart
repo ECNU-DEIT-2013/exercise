@@ -5,8 +5,8 @@ main() async {
   print("Serving at ${server.address}:${server.port}");
 
   await for (var request in server) {
-    HttpResponse res = request.response;
-    addCorsHeaders(res);
+    //HttpResponse res = request.response;
+    //addCorsHeaders(res);
     request.response
       ..headers.contentType = new ContentType("application", "json", charset: "utf-8")
       ..write('''[
@@ -20,8 +20,8 @@ main() async {
   }
 }
 
-void addCorsHeaders(HttpResponse res) {
+/*void addCorsHeaders(HttpResponse res) {
   res.headers.add("Access-Control-Allow-Origin", "*");
   res.headers.add("Access-Control-Allow-Methods", "POST, GET, OPTIONS");
   res.headers.add("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-}
+}*/
