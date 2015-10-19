@@ -12,7 +12,9 @@ main() async {
   }
 }
 
-
+/**
+ * 请你告诉我你这段代的含义。
+ */
 void addCorsHeaders(HttpResponse res) {
   res.headers.add("Access-Control-Allow-Origin", "*");
   res.headers.add("Access-Control-Allow-Methods", "POST, GET, OPTIONS");
