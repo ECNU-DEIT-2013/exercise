@@ -5,9 +5,21 @@ main() async {
   print("Serving at ${server.address}:${server.port}");
 
   await for (var request in server) {
+    addCorsHeaders(request.response);
     request.response
       ..headers.contentType = new ContentType("application", "json", charset: "utf-8")
-      ..write('[ \n "portmanteau", "fantabulous", "spork", "smog",\n "spanglish", "gerrymander", "turducken", "stagflation", \n "bromance", "freeware", "oxbridge", "palimony", "netiquette",\n  "brunch", "blog", "chortle", "Hassenpfeffer", "Schnitzelbank" \n ]')
+      ..write('''[
+      "portmanteau", "fantabulous", "spork", "smog",
+      "spanglish", "gerrymander", "turducken", "stagflation",
+      "bromance", "freeware", "oxbridge", "palimony", "netiquette",
+       "brunch", "blog", "chortle", "Hassenpfeffer", "Schnitzelbank"
+       ]''')
       ..close();
   }
+}
+
+void addCorsHeaders(HttpResponse response) {
+  response.headers.add('Access-Control-Allow-Origin', '*');
+  response.headers.add('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  response.headers.add('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
 }
