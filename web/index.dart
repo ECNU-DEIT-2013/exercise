@@ -9,18 +9,19 @@ ButtonElement deleteAll;
 var wordList;
 
 void main() {
-  //querySelector('#botton1_id').onClick.listen((MouseEvent e)=>add1to100(int.parse(querySelector('#text1').value),int.parse(querySelector('#text2').value),e));
-  querySelector('#botton2_id')//Ìí¼ÓÔªËØ
+  querySelector('#botton2_id')
   ..onClick.listen((MouseEvent e)=>querySelector('#botton2_id').remove())
   ..onClick.listen(addLi)
+  ..onClick.listen(jzZhuanhuan(49))
   ..onClick.listen(addToDoItem2);
 
   querySelector('#getWords').onClick.listen(makeRequest);
   wordList = querySelector('#wordList');
 
-  deleteAll = querySelector('#delete-all');//É¾³ýÔªËØ
+  deleteAll = querySelector('#delete-all');
   deleteAll
   ..onClick.listen((e) => toDoList.children.clear())
+  ..onClick.listen((MouseEvent e)=>deleteAll.remove())
   ..onClick.listen((e) => toDoList2.children.clear());
 
   //querySelector('#item2-newbutton').onClick.listen((MouseEvent e)=>add1to100(1,int.parse(querySelector('#item2-newtodo').value),e));
@@ -38,7 +39,6 @@ Future makeRequest(Event e) async {
 }
 
 processString(String jsonString) {
-  //wordList.children.add(new LIElement()..text = "111");
   List<String> portmanteaux = JSON.decode(jsonString);
   for (int i = 0; i < portmanteaux.length; i++) {
     wordList.children.add(new LIElement()..text = portmanteaux[i]);
@@ -57,6 +57,18 @@ void add1to100(int origin1,int origin2,MouseEvent e) {
 }
   String s=origin1.toString()+" add to "+origin2.toString()+" is "+sum.toString();
   querySelector('#sample_studentid_id').text = s;
+}
+
+void jzZhuanhuan(int b1){
+  int s1;
+  String s2="";
+  while(b1~/2!=0){
+    s1=b1%2;
+    b1=b1~/2;
+    s2=s1.toString()+s2;
+  }
+  s2=b1.toString()+s2;
+  querySelector('#sample_studentid_id').text = s2;
 }
 
 void addToDoItem2(Event e)

@@ -20,7 +20,7 @@ h1, p {
 }
 #sample_studentid_id {
   font-size: 24pt;
-  text-align: center;
+  text-align: left;
   -webkit-user-select: none;
   user-select: none;
 }

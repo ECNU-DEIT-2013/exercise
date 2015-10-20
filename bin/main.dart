@@ -5,20 +5,15 @@ main() async {
   print("Serving at ${server.address}:${server.port}");
 
   await for (var request in server) {
-    //List<String> a=["mengmeng","leilei"];
     HttpResponse res = request.response;
     addCorsHeaders(res);
     res
       ..headers.contentType = new ContentType("application", "json", charset: "utf-8")
       ..write(
-        '''[
-  "111", "222","333","444"
-]'''
+        '["111", "222","333","444"]'
 
     )
       ..close();
-
-
   }
 }
 
