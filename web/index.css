@@ -1,47 +1,15 @@
-body {
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 1.2em;
-  margin: 15px;
+#text {
+  float: left;
+  font-size:20px;
 }
-
-#exercise_2{
-  width: 100%;
-  height: 400px;
-  position: relative;
-}
-
-#text{
-  font-weight:bold;
-  font-size:25px;
-}
-
-#number1{
+#txt1{
+  width:60px;
   float:left;
-
-}
-#number2{
-  float:left;
-}
-
-ul{
-  float:left;
-  margin:0 0 0 -20px;
-}
-#add input{
-  width:100px;
-  height:30px;
-  font-size:24px;
+  margin:0 5px;
   text-align:center;
-  float:left;
-}
-#text1{
 
-  float:left;
-  margin:20px;
 }
-#text2{
-
+#btn{
   float:left;
-  margin:20px;
+  margin-left:5px;
 }
