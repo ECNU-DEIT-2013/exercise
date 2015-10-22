@@ -16,6 +16,7 @@ void main() {
 
 void makeRequest(Event e) {
   var path = 'https://www.dartlang.org/f/portmanteaux.json';
+<<<<<<< HEAD
   var httpRequest = new HttpRequest(); //抽象到具象
   httpRequest
     ..open('GET', path)  //打开一条跟服务器的通道
@@ -26,6 +27,19 @@ void makeRequest(Event e) {
 requestComplete(HttpRequest request) {
   if (request.status == 200) {//判断状态，200是一个预设值
     List<String> portmanteaux = JSON.decode(request.responseText);//JSON这一类函数无需构造，用于解析数据
+=======
+  var httpRequest = new HttpRequest();
+
+  httpRequest
+    ..open('GET', path)
+    ..onLoadEnd.listen((e) => requestComplete(httpRequest))
+    ..send('');
+}
+
+requestComplete(HttpRequest request) {
+  if (request.status == 200) {
+    List<String> portmanteaux = JSON.decode(request.responseText);
+>>>>>>> origin/10130340237
     for (int i = 0; i < portmanteaux.length; i++) {
       wordList.children.add(new LIElement()..text = portmanteaux[i]);
     }
