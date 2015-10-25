@@ -7,6 +7,8 @@
 import 'dart:html';
 import 'dart:convert';
 var wordList;
+InputElement t1;
+ButtonElement button;
 
 main() async{
   querySelector('#getWords').onClick.listen(makeRequest);
