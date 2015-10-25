@@ -10,10 +10,12 @@ import 'dart:html';
 
 var wordList;
 
+
 void main() {
   querySelector('#getWords').onClick.listen(makeRequest);
   wordList = querySelector('#wordList');
 }
+
 
 Future makeRequest(Event e) async {
   var path = 'http://127.0.0.1:8080';
