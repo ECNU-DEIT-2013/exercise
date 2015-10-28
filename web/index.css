@@ -3,10 +3,17 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   font-weight: normal;
-  line-height: 1.2em;
+
+  line-height: 1.5em;
   margin: 15px;
 }
 
 h1, p, li {
-  color: #333;
+  color: #0074C1;
+}
+#getWords {
+  padding:6px 6px 6px 6px;
+  margin:10px;
+  font-size: 14px;
+  bottom-align: center;
 }
