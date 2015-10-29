@@ -12,18 +12,29 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portmanteaux</title>
+    <title>User Information</title>
     <script async type="application/dart" src="main.dart"></script>
     <script async src="packages/browser/dart.js"></script>
     <link rel="stylesheet" href="styles.css">
   </head>
 
   <body>
-    <h1>Portmanteaux</h1>
-        
-    <button id="getWords">Get portmanteaux</button>
-    
-    <ul id="wordList">
-    </ul>
+  <div id="all">
+    <h1>User Information</h1>
+
+    <div id="ID">
+    <button id="getID" >Get ID</button>
+    <ul id="IDList"></ul>
+    </div>
+    <div id="Name">
+      <button id="getName">Get Name</button>
+      <ul id="nameList"></ul>
+    </div>
+    <div id="Email">
+      <button id="getEmail">Get Email</button>
+      <ul id="EmailList"></ul>
+    </div>
+
+  </div>
   </body>
 </html>

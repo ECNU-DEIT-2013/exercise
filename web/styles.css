@@ -1,12 +1,28 @@
 body {
   background-color: #F8F8F8;
-  font-family: 'Open Sans', sans-serif;
+  font-family: Arial Narrow;
   font-size: 14px;
   font-weight: normal;
   line-height: 1.2em;
-  margin: 15px;
-}
+  margin-left: 15px;
+ }
 
-h1, p, li {
-  color: #333;
+h1{
+  font-size:40px;
+  color:#454545;
+  font-family: Arial Narrow;
+
 }
+p, li {
+  color: #333;
+  font-family: Arial Narrow;
+}
+#ID
+{background-color:#C1FFC1;  height:1000px;width:400px; float:left;margin: auto;text-align: center;}
+#Name
+{background-color:#ffff99; height:1000px; width:400px; float:left;margin: auto;text-align: center;}
+#Email
+{background-color:#FFE4B5; height:1000px; width:400px; float:left;margin: auto;text-align: center;}
+
+button
+{  width:100px;}
