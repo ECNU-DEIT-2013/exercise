@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>请先登录</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<p>登陆系统</p>
+<p>默认用户名：abcd ,密码：abcd</p>
+<div id="container">
+    <input type="button" value="user" >
+    <input type="text" id="login_user" value="用户名">
+    <input type="button" value="password" >
+    <input type="text" id="login_password" value="密码">
+    <input type="button" value="submit" id="login_submit">
+</div>
+<div id="error_submit"></div>
+<script async type="application/dart" src="login.dart"></script>
+<script async src="packages/browser/dart.js"></script>
+</body>
+</html>

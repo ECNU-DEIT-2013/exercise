@@ -18,10 +18,18 @@
   </head>
 
   <body>
-    <h1>Portmanteaux</h1>
-        
-    <button id="getWords">Get portmanteaux</button>
+    <h1>Connect</h1>
+    <form id="#sample_form">请选择
+      <label><input id="checkbox1" type="checkbox" >name</label>
+
+    </form>
+    <input type="button" id="getWords"  value="GET NAME" onClick="javascript:{this.disabled=true;document.add.submit();}"> <!--按钮只能按一次-->
+    <input type="button" value="RESET" id="reset_button" >
     <ul id="wordList"></ul>
+
+
+
+
     <script async type="application/dart" src="main.dart"></script>
     <script async src="packages/browser/dart.js"></script>
   </body>

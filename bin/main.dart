@@ -1,14 +1,16 @@
 
 import 'dart:io';
 import 'dart:convert' show UTF8, JSON;
+import 'package:sqljocky/sqljocky.dart';
 
 main() async {
-  List jsondata = [
-    "portmanteau", "fantabulous", "spork", "smog",
-    "spanglish", "gerrymander", "turducken", "stagflation",
-    "bromance", "freeware", "oxbridge", "palimony", "netiquette",
-    "brunch", "blog", "chortle", "Hassenpfeffer", "Schnitzelbank"
-  ];
+  List jsondata=[];
+  var pool = new ConnectionPool(host: '52.8.67.180', port: 3306, user: 'dec2013stu', password: 'dec2013stu', db: 'stu_10130340202');
+  var results = await pool.query('select name,email from user_zl');
+  results.forEach((row) {
+    print('name: ${row[0]}');
+    jsondata.add('${row[0]}');
+  });
   var server = await HttpServer.bind(InternetAddress.LOOPBACK_IP_V4, 8080);
   print("Serving at ${server.address}:${server.port}");
   await for (var request in server) {
@@ -20,7 +22,6 @@ main() async {
       ..close();
   }
 }
-
 
 void addCorsHeaders(HttpResponse res) {
   res.headers.add("Access-Control-Allow-Origin", "*");
