@@ -14,7 +14,7 @@ main() async {
     var results = await pool.query('select * from testsheet ');
     String writein='[ \n';
     var x=0;
-    results.forEach((row) {
+    await results.forEach((row) {
       if(x==0){
       writein=writein + '"${row[0]}, ${row[1]}"';
       print(writein);
@@ -24,7 +24,7 @@ main() async {
         print(writein);
       }
     });
-    //writein=writein+ '\n ]';
+    writein=writein+ '\n ]';
     //print(writein);
     request.response
       ..headers.contentType = new ContentType("application", "json", charset: "utf-8")

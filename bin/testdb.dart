@@ -1,5 +1,8 @@
 import 'dart:io';
 import 'package:sqljocky/sqljocky.dart';
+import 'package:csslib/css.dart';
+import 'package:csslib/parser.dart';
+import 'package:csslib/visitor.dart';
 
 main() async {
   var pool = new ConnectionPool(host: '52.89.52.143', port: 3306, user: 'User', password: 'ourpassword', db: 'ourdb1', max: 5);

@@ -7,6 +7,10 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:html';
+import 'package:csslib/css.dart';
+import 'package:csslib/parser.dart';
+import 'package:csslib/visitor.dart';
+
 
 var wordList;
 
@@ -31,7 +35,10 @@ Future makeRequest(Event e) async {
 processString(String jsonString) {
   List<String> portmanteaux = JSON.decode(jsonString);
   for (int i = 0; i < portmanteaux.length; i++) {
-    wordList.children.add(new LIElement()..text = portmanteaux[i]);
+    wordList.children.add(new DivElement()..text = portmanteaux[i]
+      ..id='divv'
+    );
+
   }
 }
 

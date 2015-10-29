@@ -16,5 +16,10 @@ h1, p, li {
   height: 400px;
   position: relative;
   border: 1px solid #ccc;
-  background-color: #fff;
+  background-color: #cccccc;
+}
+
+#divv {
+  background-color: #CCCCCC;
+  width: 400px;
 }
