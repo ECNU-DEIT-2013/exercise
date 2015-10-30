@@ -5,10 +5,15 @@ import 'dart:convert';
 
 
 main() async {
-  var server = await HttpServer.bind(InternetAddress.LOOPBACK_IP_V4, 8082);
+  var server = await HttpServer.bind(InternetAddress.LOOPBACK_IP_V4, 8085);
   print("Serving at ${server.address}:${server.port}");
-  var x = await addSql();
-  await  hello(server,x);
+  await for (var req in server) {
+      var jsonString = await req.transform(UTF8.decoder).join();
+      await insertSql(jsonString);
+      req.response.close();
+  }
+
+
 }
 void addCorsHeaders(HttpResponse res) {
   res.headers.add("Access-Control-Allow-Origin", "*");
@@ -20,18 +25,16 @@ addSql() async{
   var results = await pool.query('select name, email from user_info');
   print("edison");
   return results;
-
- /* results.forEach((row) {
-    print('Name: ${row[0]}, email: ${row[1]}');
-  });*/
 }
+
 
 hello(var server,var results) async{
   List list = new List();
-  results.forEach((row) {
+  await results.forEach((row) {
     print('Name: ${row[0]}, email: ${row[1]}');
     list.add(row[0]);
   });
+  print(list);
   await for (var request in server) {
     var json = JSON.encode(list);
     print(json);
@@ -43,4 +46,11 @@ hello(var server,var results) async{
     )
       ..close();
   }
+}
+insertSql(var x) async{
+  var name1 =JSON.decode(x);
+  print(name1);
+  var pool = new ConnectionPool(host: '52.8.67.180', port: 3306, user: 'dec2013stu', password: 'dec2013stu', db: 'stu_10130340201', max: 10);
+  var query = await pool.prepare('insert into user_info (name, email) values (?, ?)');
+  await query.execute(['${name1}', '${name1}@qq.com']);
 }
