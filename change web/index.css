@@ -16,9 +16,8 @@ body {
 }
 
 #sample_form_id{
-    position: relative;
-    margin-left: 350px;
-    width: 45%;
+ position: relative;
+  width: 45%;
 }
 #sample_text_id {
   font-size: 10pt;
@@ -30,12 +29,7 @@ body {
 #notice{
   font-size: 5px;
 }
-#right_id{
-    height: 30px;
-}
-#left_id{
-    height: 30px;
-}
+
 #sample_incontainer_id{
  position: relative;
  margin-top: 150px;

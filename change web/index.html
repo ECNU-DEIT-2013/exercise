@@ -12,27 +12,17 @@
     <p>Hello world from Dart!</p>
     <div id="sample_container_id">
       <div id="sample_incontainer_id">
-        <form id="sample_form_id" >
-          <fieldset>
-            <legend>加法器</legend>
-             <div>
-               <input  id="to-do-input1" type="text" placeholder="Input please" />
-               +<input  id="to-do-input2" type="text" placeholder="Input please" />
-               <button type="button"id="sample_text_id">=</button>
-               <span id="sample_text"></span>
-            </div>
-            <div>
-              <ul id="to-do-list">
-              </ul>
-            </div>
-            <div>
-                <button type="button" id="clear-id">clear</button>
-            </div>
-          </fieldset>
-          <p>注意：按“=”按钮得出答案，按“clear”清除输入框与结果的数据。</p>
-        </form>
-
-      </div>
+      <form id="sample_form_id" >
+        <fieldset>
+          <legend>加法器</legend>
+          <input type="text" id="left" value="" />
+          +.....+<input type="text" id="right" value=""/>
+        <button type="button"id="sample_text_id">=</button>
+          <span id="sample_text"></span>
+        </fieldset>
+      </form>
+      <p id="notice">注意：按“=”即可得出结果，数字大小位置不定，可以将两数字及其之间所有数字相加！</p>
+    </div>
     </div>
     <script type="application/dart" src="index.dart"></script>
     <script src="packages/browser/dart.js"></script>
