@@ -1,5 +1,7 @@
 name: web
 version: 0.0.1
 description: A simple console application.
+dependencies:
+  sqljocky: "^0.14.1"
 #dependencies:
 #  foo_bar: '>=1.0.0 <2.0.0'
