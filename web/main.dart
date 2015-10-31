@@ -1,12 +1,21 @@
+// Copyright (c) 2012, the Dart project authors.  
+// Please see the AUTHORS file for details. 
+// All rights reserved. Use of this source code 
+// is governed by a BSD-style license that can be 
+// found in the LICENSE file.
+
+import 'dart:html';
+import 'dart:convert';
+
 var wordList;
 
 void main() {
-  querySelector('#getWords').onClick.listen(makeRequest);
+  querySelector('#getWords').onClick.listen(makeRequest1);
   wordList = querySelector('#wordList');
 }
 
 void makeRequest(Event e) {
-  var path = 'https://www.dartlang.org/f/portmanteaux.json';
+  var path = 'http://127.0.0.1:8080';
   var httpRequest = new HttpRequest();
   httpRequest
     ..open('GET', path)
