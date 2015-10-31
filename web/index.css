@@ -1,5 +1,5 @@
 body {
-  background-color: #F8F8F8;
+  background-color: mistyrose;
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   font-weight: normal;
@@ -7,75 +7,43 @@ body {
   margin: 15px;
 }
 
-h1, p {
+h1, p ,button{
   color: #333;
-}
-#button_for_add{
-  width:4%;
 
-  font-size: 20px;
-  position:relative;
+}
+#getWords{
+  margin-top:3%;
+  width:30%;
+  text-align: center;
+}
+li{
+  list-style-type:none;
+  background-color: transparent;
+}
+ul{
+  margin-left: -40px;
+  margin-bottom: 3%;
+}
+li:hover{
+  background-color: cornsilk;
+}
+#container{
+  width: 80%;
+  position: relative;
+  border: 1px solid #888888;
+  background-color: #fff;
+  }
+#container2{
+  width: 80%;
+  height: 120px;
+  position: relative;
+  border: 1px solid #888888;
+  background-color: #fff;
 }
 
-#sample_container_id {
-  width: 100%;
-  height: 400px;
-  position: relative;
-  border: 1px solid #ccc;
-  background-color: #fff;
-}
-#sample_container_id2 {
-  width: 100%;
-  height: 400px;
-  position: relative;
-  border: 1px solid #ccc;
-  background-color: #fff;
-  alignment: center;
-  text-align: center;
-}
-#addUpNNum{
-  width: 100%;
-  height: 400px;
-  position: relative;
-  border: 1px solid #ccc;
-  background-color: #fff;
-}
-#sample_text_id {
-  font-size: 24pt;
-  text-align: center;
-  margin-top: 140px;
-  -webkit-user-select: none;
-  user-select: none;
-}
-#result_of_add2{
-  font-size:24px;
-}
-#sample_text_id2 {
-  font-size: 24px;
-  text-align: center;
-  margin-top: 50px;
-  -webkit-user-select: none;
-  user-select: none;
-}
-#text_for_add{
-  text-align: center;
-}
-#sample_student_id{text-align: center;}
 
-#container_addTo100{
-  width: 100%;
-  height: 400px;
-  position: relative;
-  border: 1px solid #ccc;
-  background-color: #fff;
-}
-#text_id3{
-  font-size: 24pt;
-  text-align: center;
-  margin-top: 140px;
-  -webkit-user-select: none;
-  user-select: none;
-}
-#text_for_addTo100{
-  text-align: center;
-}
+
+
+
+
+

@@ -12,18 +12,24 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portmanteaux</title>
+    <title>User's Information</title>
     <script async type="application/dart" src="main.dart"></script>
     <script async src="packages/browser/dart.js"></script>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css">
   </head>
-
+  <center>
   <body>
-    <h1>Portmanteaux</h1>
-        
-    <button id="getWords">Get portmanteaux</button>
-    
-    <ul id="wordList">
-    </ul>
-  </body>
+    <h1>User's Information</h1>
+    <div id="container">
+      <button id="getWords">Get User's Information</button>
+      <br><br>
+      <ul id="wordList"></ul>
+    </div>
+    <br>
+  <div id="container2">
+    <p>UserID:<input id ="IdInput"> </input><br></p>
+    <p>KEY:<input id="KeyInput"></input></p>
+    <button id="Login">登录</button>  <button id="Cancel">取消</button>
+  </div>
+  </body></center>
 </html>

@@ -12,8 +12,12 @@ var wordList;
 void main() {
   querySelector('#getWords').onClick.listen(makeRequest);
   wordList = querySelector('#wordList');
+  querySelector('#Cancel').onClick.listen(CancelTextInput);
 }
-
+void CancelTextInput(event e){
+  querySelector('#IdInput').value=' ';
+  querySelector('#KeyInput').value=' ';
+}
 void makeRequest(Event e) {
  // var path = 'https://www.dartlang.org/f/portmanteaux.json';
   var path = 'http://127.0.0.1:8008';
@@ -21,9 +25,9 @@ void makeRequest(Event e) {
   var httpRequest = new HttpRequest();
   httpRequest
     ..open('GET', path)
-    //..setRequestHeader("Accept")
     ..onLoadEnd.listen((e) => requestComplete(httpRequest))
     ..send('');
+  querySelector('#wordList').children.add(new LIElement()..text = '-');
 }
 
 requestComplete(HttpRequest request) {
