@@ -10,7 +10,7 @@ import 'dart:convert';
 var wordList;
 
 void main() {
-  querySelector('#getWords').onClick.listen(makeRequest1);
+  querySelector('#getWords').onClick.listen(makeRequest);
   wordList = querySelector('#wordList');
 }
 
