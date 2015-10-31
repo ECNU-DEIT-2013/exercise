@@ -1,0 +1,45 @@
+body {
+  background-color: #F8F8F8;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 1.2em;
+  margin: 15px;
+}
+
+h1, p, li {
+  color: #333;
+}
+#getWords{
+  font-size:20px;
+  margin-top: 30px;
+  margin-left: 50px;
+}
+#wordList{
+  font-size:15px;
+  margin-left: 50px;
+}
+
+#sample_form{
+  margin-top: 20px;
+
+}
+
+#container{
+  margin-top: 100px;
+  text-align: center;
+  width: 200px;
+  margin-left: 300px;
+}
+#login_user{
+  width:80px;
+  margin-left: 40px;
+  margin-bottom: 5px;
+
+}
+#login_password{
+  width:80px;
+  margin-left: 10px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
