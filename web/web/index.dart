@@ -1,0 +1,32 @@
+import 'dart:async';
+import 'dart:convert';
+import 'dart:html';
+
+var wordList;
+
+void main() {
+  querySelector('#getWords').onClick.listen(makeRequest);
+  wordList = querySelector('#wordList');
+}
+
+Future makeRequest(Event e) async {
+  var path ='http://127.0.0.1:8080/';
+  //'https://www.dartlang.org/f/portmanteaux.json';
+  try {
+    processString(await HttpRequest.getString(path));
+  } catch (e) {
+    print('Couldn\'t open $path');
+    handleError(e);
+  }
+}
+
+processString(String jsonString) {
+  List<String> portmanteaux = JSON.decode(jsonString);
+  for (int i = 0; i < portmanteaux.length; i++) {
+    wordList.children.add(new LIElement()..text = portmanteaux[i]);
+  }
+}
+
+handleError(Object error) {
+  wordList.children.add(new LIElement()..text = 'Request failed.');
+}
