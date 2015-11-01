@@ -21,7 +21,7 @@ getData() async{
   var results = await pool.query('select * from student;');
   results.forEach((row) {
     print('number: ${row.number}, name: ${row.name}, gender:${row.gender}, age: ${row.age},department: ${row.department}');
-    dataemail.add('"${row.number} ${row.name}  ${row.gender} ${row.age} ${row.department}"');
+    dataemail.add('"${row.number} ${row.name}  ${row.gender} ${row.age} ${row.department}"');//将数据库中的信息放入列表
   });
   print(dataemail);
 }

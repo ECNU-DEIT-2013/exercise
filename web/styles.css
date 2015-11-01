@@ -5,8 +5,40 @@ body {
   font-weight: normal;
   line-height: 1.2em;
   margin: 15px;
+  list-style: none;
 }
 
-h1, p, li {
+ul,li{
+  list-style: none;
+  padding-left: 0px;
+  padding-top: 10px;
+}
+h1, p {
   color: #333;
 }
+#number {
+  float:left;
+  width:40%;
+}
+#name {
+  float:left;
+  width: 20%;
+}
+
+#gender {
+  float:left;
+  width: 20%;
+}
+
+#age {
+  float:left;
+  width: 20%;
+}
+
+#depart {
+  float:left;
+  width: 20%;
+}
+
+#maintainer{
+  width:1500px}

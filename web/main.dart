@@ -8,10 +8,19 @@ import 'dart:html';
 import 'dart:convert';
 
 var wordList;
+//List dataname = new List();
 
 void main() {
   querySelector('#getWords').onClick.listen(makeRequest);
   wordList = querySelector('#wordList');
+//  querySelector('#getNames').onClick.listen(make1Request);
+  //wordList = querySelector('#nameList');
+  //querySelector('#getGender').onClick.listen(make2Request);
+  //wordList = querySelector('#genderList');
+  //querySelector('#getAge').onClick.listen(make3Request);
+  //wordList = querySelector('#ageList');
+  //querySelector('#getdepart').onClick.listen(make4Request);
+  //wordList = querySelector('#departList');
 }
 
 void makeRequest(Event e) {
@@ -26,7 +35,10 @@ void makeRequest(Event e) {
 requestComplete(HttpRequest request) {
   if (request.status == 200) {
     List<String> portmanteaux = JSON.decode(request.responseText);
-    for (int i = 0; i < portmanteaux.length; i++) {
+    for (int i = 0; i < portmanteaux.length;i++) {
+      //for (int j=0;j<portmanteaux[i];j++){
+      // if(j!=' ')
+      // dataname.add(portmanteaux[i][j],break,)}
       wordList.children.add(new LIElement()..text = portmanteaux[i]);
     }
   } else {
