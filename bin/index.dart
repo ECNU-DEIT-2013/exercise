@@ -8,6 +8,7 @@ import 'package:sqljocky/sqljocky.dart';
 
 main() async {
   
+List m = new List();
 var server = await HttpServer.bind(InternetAddress.LOOPBACK_IP_V4, 8080);
   
 print("Serving at ${server.address}:${server.port}");
