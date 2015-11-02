@@ -39,6 +39,8 @@ Future makeRequest(Event e) async {
 }
 
 processString(String jsonString) {
+  //["Number: 1, Name: Hu Yonghua,Subject: math""Number: 2, Name: Wang Mei,Subject: chinese""Number: 3, Name: Yan Fengyu,Subject: english""Number: 4, Name: Dong Yuxue,Subject: computer"]
+  //你的json数据格式有问题，运行能读出来？
   List<String> portmanteaux = JSON.decode(jsonString);
   for (int i = 0; i < portmanteaux.length; i++) {
     wordList.children.add(new LIElement()..text = portmanteaux[i]);
