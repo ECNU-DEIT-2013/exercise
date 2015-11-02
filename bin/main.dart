@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'package:sqljocky/sqljocky.dart';
 import 'dart:convert' show UTF8, JSON;
-
+//测试中文注释
 main() async {
   var userlist=new List();
    //var IDlist = new List();
@@ -12,8 +12,8 @@ main() async {
     var pool = new ConnectionPool(host: '52.8.67.180', port: 3306, user:"dec2013stu", password: 'dec2013stu', db: 'stu_10130340210');
     var results = await pool.query('select user_id,user_name, user_email from user_inf');
     results.forEach((row) {
-      print('ID:${row[0]},Name: ${row[1]}, E-mail: ${row[2]}');
-      userlist.add('"${row[0]}","${row[1]}","${row[2]}"');
+      print('ID编号:${row[0]},姓名: ${row[1]}, E-mail: ${row[2]}');
+      userlist.add('"编号${row[0]}","姓名${row[1]}","${row[2]}"');
       //userlist.add(['"${row[0]}"','"${row[1]}"']);
      // userlist.add ({'"ID"':'"${row[0]}"','"Name"':'"${row[1]}"','"email"':'"${row[2]}"'});
       //IDlist.add('"${row[0]}"');
