@@ -50,7 +50,7 @@ void main() {
   querySelector('#getWords').onClick.listen(makeRequest);
   wordList = querySelector('#wordList');
 }
-
+//不错，尝试了future机制
 Future makeRequest(Event e) async {
   var path = 'http://127.0.0.1:8080';
   try {
