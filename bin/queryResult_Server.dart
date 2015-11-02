@@ -12,8 +12,10 @@ main() async {
   await for (var request in server) {
     var json =JSON.encode(list);
     print(json);
+
     HttpResponse res = request.response;
     addCorsHeaders(res);
+
     request.response
       ..headers.contentType = new ContentType("application", "json", charset: "utf-8")
       ..write('${json}'
