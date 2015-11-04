@@ -25,7 +25,7 @@ void makeRequest(Event e) {
 
 requestComplete(HttpRequest request) {
   if (request.status == 200) {//200表示数据正确
-    List<String> portmanteaux = JSON.decode(request.responseText);//解析数据
+    List<String> portmanteaux = JSON.decode(request.responseText);//解析数据 a stream of byte lists (Stream<List<int>>)
     for (int i = 0; i < portmanteaux.length; i++) {
       wordList.children.add(new LIElement()..text = portmanteaux[i]);
     }
@@ -35,3 +35,4 @@ requestComplete(HttpRequest request) {
   }
 }
 //创建服务器
+//An HttpRequest object is a stream of byte lists (Stream<List<int>>).
