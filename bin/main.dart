@@ -10,9 +10,14 @@ main() async {
     var pool = new ConnectionPool(host: '52.8.67.180', port: 3306, user: 'dec2013stu', password: 'dec2013stu', db: 'stu_10130340223', max: 5);
   var results = await pool.query('select * from stuff');
   results.forEach((row) {
-    print('Name: ${row.name}, email: ${row.email}');
-    inform.add('Name: ${row.name}, email: ${row.email}');
+    print('Id: ${row.id},Name: ${row.name}, email: ${row.email}');
+    inform.add('Id: ${row.id},Name: ${row.name}, email: ${row.email}');
   });
+  var query = await pool.prepare('insert into stuff (id,name, email) values (?,?, ?)');
+  for(var i=5;i<=10;i++)var result = await query.execute([i.toString(),'name'+i.toString(), 'null']);
+ // print("New user's id: ${result.insertId}");
+
+
 
   await for (var request in server) {
      HttpResponse res = request.response;
