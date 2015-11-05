@@ -8,6 +8,7 @@ main() async {
   var server = await HttpServer.bind(InternetAddress.LOOPBACK_IP_V4, 8085);
   print("Serving at ${server.address}:${server.port}");
   await for (var req in server) {
+     addCorsHeaders(req.response);
       var jsonString = await req.transform(UTF8.decoder).join();
       await insertSql(jsonString);
       req.response.close();
