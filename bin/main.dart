@@ -9,7 +9,7 @@ main() async {
       password: 'dec2013stu',
       db: 'stu_10130340207',
       max: 5);
-  var results = await pool.query('select * from USERS_MASSAGE');
+  var results = await pool.query('select * from USERS_MESSAGE');
   var a;
   await results.forEach((row) {
     if (a == null) {
