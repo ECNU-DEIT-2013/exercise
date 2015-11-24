@@ -1,0 +1,5 @@
+name: untitled
+version: 0.0.1
+description: A simple console application.
+dependencies:
+  rest_frame: "^0.1.1"
